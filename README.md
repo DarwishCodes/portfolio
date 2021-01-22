@@ -1,3 +1,3 @@
 # portfolio
 
-https://darwishcodes.github.io/cdoc/
+https://darwishcodes.github.io/portfolio/
