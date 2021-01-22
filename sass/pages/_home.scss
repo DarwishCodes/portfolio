@@ -1,0 +1,23 @@
+.section-project {
+    padding: 0rem 5rem 30rem 5rem;
+
+    @include addMediaQuery(phone-m) {
+        padding: 0rem 0 30rem 0;
+    }
+}
+
+.section-form {
+    padding: 0rem 5rem 30rem 5rem;
+
+    @include addMediaQuery(phone-m) {
+        padding: 0rem 0 30rem 0;
+    }
+}
+
+.section-about {
+    padding: 0rem 5rem 30rem 5rem;
+
+    @include addMediaQuery(phone-m) {
+        padding: 0rem 0 30rem 0;
+    }
+}

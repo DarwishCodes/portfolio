@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: "Google Sans";
+    src: url("fonts/goolge-sans-bold.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: "Google Sans Regular";
+    src: url("fonts/goolge-sans-regular.woff2") format('woff2');
+}
+
+    
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-black;
+    color: $color-white;
+}

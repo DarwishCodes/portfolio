@@ -1,0 +1,77 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding-top: 20rem;
+    overflow: hidden;
+
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color-primary;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__background-image {
+        display: block;
+        position: absolute;
+        bottom: -11rem;
+        left: 40%;
+        width: 48rem;
+        opacity: 0.22;
+        z-index: 1;
+        transition: all 0.3s;
+
+        @include addMediaQuery(tablet){
+            width: 31rem;
+        }
+    }
+
+    &__text-box {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        z-index: 5;
+    }
+
+    &__image {
+        display: block;
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        width: auto;
+        height: 37rem;
+        transition: all 0.09s ease-out;
+        z-index: 5;
+
+        @include addMediaQuery(laptop) {
+            height: 30rem;
+        }
+
+        @include addMediaQuery(tablet) {
+            display: none;
+        }
+    }
+
+    &__logo-box {
+        padding-top: 3rem;
+    }
+
+    &__logo {
+        display: block;
+        width: auto;
+        height: 18rem;
+    }
+
+    &__view-more {
+        position: absolute;
+        transform: translate(-50%,50%);
+        top: 87%;
+        left: 50%;
+    }
+}

@@ -1,0 +1,21 @@
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+
+    &--1 {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &--2 {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    &--3 {
+        width: 23rem;
+        margin: 0 auto;
+    }
+}

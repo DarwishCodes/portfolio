@@ -1,0 +1,30 @@
+.projects {
+    position: relative;
+    
+    
+    &:hover &__background-image {
+        filter: saturate(1);
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 72rem;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__background-image {
+        display: block;
+        position: absolute;
+        bottom: -11rem;
+        left: 30%;
+        width: 48%;
+        opacity: 0.22;
+        filter: saturate(0);
+        z-index: 1;
+        transition: all 1s;
+
+    }
+}

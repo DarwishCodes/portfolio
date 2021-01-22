@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <title id="title">Portfolio</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="navigation" id="navbar">
+            <div class="row">
+                <img src="img/logo-darwish.png" alt="Logo" class="navigation__logo">
+                <div class="navigation__nav">
+                    <ul class="navigation__list">
+                        <li class="navigation__item navigation__item--select"><a href="#" class="navigation__link navigation__link--select">Home</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">My projects</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Hire me</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header" id="welcome-section">
+        <div class="header__background">
+            <img class="header__background-image" src="img/logo-3-slash.png" alt="Logo Hexagon">
+        </div>
+
+        <div class="row">
+            <!-- <div class="header__logo-box">
+                <img class="header__logo" src="img/logo-3.png" alt="Logo">
+            </div> -->
+            <div class="col-1-of-2">
+                <div class="header__text-box">
+                    <h1 class="heading-primary">
+                        <span class="heading-primary--main">Hello There!</span>
+                        <span class="heading-primary--sub">Looking for a Web Developer?</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <img class="header__image" src="img/laptop.png" alt="Laptop">
+            </div>
+        </div>
+        <div class="u-center-text">
+            <a href="#" class="icon-link header__view-more"><i class="icon ion-ios-arrow-down icon-link__arrow"></i></a>
+        </div>
+
+    </header>
+    <script>
+        var currentX, prevX, translateToBottom, scale, opacity;
+
+        var getDOM = {
+            html: document.querySelector('html'),
+            header: document.querySelector('.header'),
+            headImg: document.querySelector('.header__image'),
+            headBackImg: document.querySelector('.header__background-image'),
+            navigation: document.querySelector('.navigation')
+        }
+
+        document.addEventListener('scroll', function () {
+            currentX = getDOM.html.scrollTop;
+
+            if (currentX < getDOM.header.clientHeight / 0.25) {
+                translateToBottom = currentX / 30;
+                translateToBottom2 = currentX / 10;
+                getDOM.headImg.style.transform = "translateY(" + translateToBottom + "rem)";
+                getDOM.headBackImg.style.transform = "translateY(" + translateToBottom2 + "rem)";
+            }
+
+            if (currentX > prevX) {
+                getDOM.navigation.style.transform = "translateY(-7.3rem)";
+            } else if (currentX < prevX) {
+                getDOM.navigation.style.transform = "translateY(0rem)";
+            }
+
+            prevX = getDOM.html.scrollTop;
+
+        });
+
+        getDOM.headImg.addEventListener('mousedown', function () {
+            getDOM.headImg.style.transform = "scale(0.9)";
+        });
+
+        getDOM.headImg.addEventListener('mouseup', function () {
+            getDOM.headImg.style.transform = "scale(1)";
+        });
+
+        window.onload = function () {
+
+            document.querySelector('.btn__ripple-layer').addEventListener('mousedown', function (e) {
+
+                // document.querySelector('.btn').insertAdjacentHTML('beforeend', '<span class="btn__ripple"></span>');
+                document.querySelector('.btn__ripple').style.top = e.offsetY + "px";
+                document.querySelector('.btn__ripple').style.left = e.offsetX + "px";
+                // document.querySelector('.btn__ripple').style.transform = "scale(200)";
+                console.log(Math.floor(e.timeStamp));
+                if (document.querySelector('.btn__ripple').classList.contains('ripple-now') === false) {
+                    document.querySelector('.btn__ripple').classList.add('ripple-now');
+                } else {
+                    document.querySelector('.btn__ripple').classList.remove('ripple-now');
+                    setTimeout(function () {
+                        document.querySelector('.btn__ripple').classList.add('ripple-now');
+
+                    }, 10);
+
+                }
+
+            });
+
+            // document.querySelector('.btn__ripple-layer').addEventListener('mouseup', function(e) {
+            //     document.querySelector('.btn__ripple').style.opacity = '0';
+
+            // });
+
+
+        }
+
+        // document.querySelector('.header').addEventListener('mousemove', function(e){
+
+        //     // console.log(e.clientX + " " + e.clientY);
+        //                         // 1380 480
+        //     if(e.clientX < 1380 && e.clientY < 480) {
+
+        //         document.querySelector('.header__image').style.transform = "translate3d("+ e.clientX / 300 +"rem," + e.clientY / 300 +"rem,0rem)";
+
+        //     } else if(e.clientX < 1380 && e.clientY > 480) {
+        //         document.querySelector('.header__image').style.transform = "translate3d("+ e.clientX / 300 +"rem," + e.clientY / -300 +"rem,0rem)";
+        //     }
+
+
+        //     if(e.clientX > 1380 && e.clientY < 480) {
+
+        //         document.querySelector('.header__image').style.transform = "translate3d("+ ((e.clientX / 300) -5.8 ) +"rem," + e.clientY / 300 +"rem,0rem)";
+        //     } else if(e.clientX > 1380 && e.clientY > 480) {
+
+        //         document.querySelector('.header__image').style.transform = "translate3d("+ ((e.clientX / 300) -5.8 ) +"rem," + e.clientY / 300 +"rem,0rem)";
+        //     }
+        // });
+
+        // document.querySelector('.icon-link').addEventListener('mousedown', function(){
+
+        // });
+        // document.querySelector('.icon-link').style.position = 'none';
+        //     document.querySelector('.icon-link').style.top = '0px';
+        //     document.querySelector('.icon-link').style.left = '0px';
+
+        // document.querySelector('.icon-link').addEventListener('drag', function(){
+
+        //     document.querySelector('html').addEventListener('mousemove', function(e){
+
+        //     console.log(window.screenX + " " + window.screenY);
+        //     document.querySelector('.icon-link').style.transform = 'translate3d(' +(e.screenX / window.screen.width) * 100 + 'vw,'+ (e.screenY /window.screen.height) * 100  +'vh,0px)';
+
+        //     });
+
+        // });
+
+        // document.querySelector('.icon-link').addEventListener('mouseup', function(){
+        //     document.querySelector('.icon-link').style.position = 'none';
+        //     document.querySelector('.icon-link').style.top = '0px';
+        //     document.querySelector('.icon-link').style.left = '0px';
+        // });
+    </script>
+    <main class="main">
+        <div class="section-about">
+            <div class="row">
+                <div class="u-center-text u-margin-bottom-large u-margin-top-large">
+                    <h2 class="heading-secondry">
+                        What i do
+                    </h2>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="paragraph">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt explicabo</p>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="image__frame">
+                        <img class="image image--1" src="img/monitor--5-no-background.png" alt="Website">
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <p class="paragraph">ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
+                </div>
+                <div class="col-1-of-2">
+                    <div class="image__frame">
+                        <img class="image image--2" src="img/phone.png" alt="Phone">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="section-project" id="projects">
+            <div class="projects">
+                <div class="projects__background">
+                    <img class="projects__background-image" src="img/logo-3-slash.png" alt="Logo Hexagon">
+                </div>
+                <div class="row">
+                    <div class="u-center-text u-margin-bottom-large">
+                        <h2 class="heading-secondry">Some projects</h2>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card project-tile">
+                            <div class="card__image-box">
+                                <img class="card__image" src="img/This is Mohammad Ali-1.jpg" alt="Preoject 1">
+                            </div>
+                            <div class="card__text-block">
+                                <span class="card__title"><a href="#" class="card__link">Project 1</a></span>
+                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            </div>
+                            <div class="card__languages">
+                                <span class="card__code card__code--css">CSS</span>
+                                <span class="card__code card__code--js">JavaScript</span>
+                                <span class="card__code card__code--php">PHP</span>
+                                <span class="card__code card__code--mysql">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+
+        <div class="section-form">
+            <div class="row">
+                <div class="u-center-text u-margin-bottom-large">
+                    <h2 class="heading-secondry">Contact me</h2>
+                </div>
+
+                <div class="form__paper">
+                    <form action="#" class="form">
+                        <div class="form__group">
+                            <input type="email" placeholder=" " id="email" class="form__input" required>
+                            <label class="form__label" for="email">Email</label>
+                            <span class="form__input-border"></span>
+                        </div>
+                        <div class="form__group">
+                            <textarea id="text" placeholder="Enter message" class="form__text" required></textarea>
+                        </div>
+                        <div class="u-right-text u-margin-top-medium">
+                            <button id="btn-submit" class="btn form__btn">Submit
+                                <span class="btn__ripple-layer"></span>
+                                <span class="btn__ripple"></span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="form__social-icons">
+                        <a class="form__social-icon-box" href="#"><i
+                                class="icon ion-logo-facebook form__social-icon"></i></a>
+                        <a class="form__social-icon-box" href="#"><i
+                                class="icon ion-logo-twitter form__social-icon"></i></a>
+                        <a class="form__social-icon-box" id="profile-link" target="_blank"
+                            href="https://github.com/DevDisho"><i
+                                class="icon ion-logo-github form__social-icon"></i></a>
+                    </div>
+                </div>
+                <img class="image image--3" src="img/logo-3.png" alt="Full Logo">
+            </div>
+        </div>
+    </main>
+</body>
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+</html>

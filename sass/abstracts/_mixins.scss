@@ -1,0 +1,66 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
+}
+
+// MEDIA QUERY MANAGER
+
+// 0    - 320px  : Phone Small
+// 320  - 375px  : Phone Medium
+// 375  - 425px  : Phone Large
+// 425  - 768px  : Tablet
+// 768  - 1024px : Laptop
+// 1024 - 1440px : Laptop Large
+// 1440 - 2560px : Desktop
+// 2560 -        : Desktop Hell Large
+
+// $breakpoint argument choices:
+// - phone-s
+// - phone-m
+// - phone-l
+// - tablet
+// - laptop
+// - laptop-l
+// - desktop
+// - desktop-l
+
+// 1em = 16px
+
+
+@mixin  addMediaQuery($breakpoint) {
+    @if $breakpoint == phone-s {
+        @media (max-width: 20em) { @content };         //  320px
+    }
+
+    @if $breakpoint == phone-m {
+        @media (max-width: 23.4375em) { @content };    //  375px
+    }
+
+    @if $breakpoint == phone-l {
+        @media (max-width: 26.5625em) { @content };    //  425px
+    }
+
+    @if $breakpoint == tablet {
+        @media (max-width: 48em) { @content };         //  768px
+    }
+
+    @if $breakpoint == laptop {
+        @media (max-width: 64em) { @content };         //  1024px
+    }
+
+    @if $breakpoint == laptop-l {
+        @media (max-width: 90em) { @content };         //  1440px
+    }
+
+    @if $breakpoint == desktop {
+        @media (max-width: 160em) { @content };        //  2560px
+    }
+
+    @if $breakpoint == desktop-l {
+        @media (min-width: 160em) { @content };        
+    }
+}
