@@ -1,61 +1,61 @@
 body {
-    font-family: "Google Sans", sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: $color-primary-dark;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-primary-dark;
 }
 
-
 .heading-primary {
-    color: $color-white;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+  color: $color-white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 
-    &--main {
-        text-transform: none;
-        display: block;
-        letter-spacing: 0;
-        font-size: 3.8rem;
-        font-weight: 500;
-        color: $color-primary-dark;
+  &--main {
+    text-transform: none;
+    display: block;
+    letter-spacing: 0;
+    font-size: 5rem;
+    font-weight: 500;
+    color: $color-primary-dark;
 
-        @include addMediaQuery(laptop) {
-            font-size: 3.1rem;
-        }
+    @include addMediaQuery(laptop) {
+      font-size: 3.1rem;
     }
+  }
 
-    &--sub {
-        font-family: "Google Sans Regular", sans-serif; 
-        text-transform: none;
-        display: block;
-        letter-spacing: 0;
-        font-size: 2.5rem;
-        font-weight: 300;
-        color: $color-primary-dark;
+  &--sub {
+    font-family: "Google Sans Regular", sans-serif;
+    text-transform: none;
+    display: block;
+    letter-spacing: 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $color-primary-dark;
 
-        @include addMediaQuery(laptop) {
-            font-size: 1.89rem;
-        }
+    @include addMediaQuery(laptop) {
+      font-size: 1.89rem;
     }
+  }
 }
 
 .heading-secondry {
-    font-family: "Roboto", sans-serif;
-    font-size: 2.875rem;
-    display: inline-block;
-    color: $color-black;
-    font-weight: 400;
-    letter-spacing: -.01562rem;
-    line-height: 2.4375rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 3.6rem;
+  display: inline-block;
+  color: $color-black;
+  font-weight: 400;
+  letter-spacing: -0.01555rem;
+  line-height: 2.4375rem;
 }
 
 .heading-tertiary {
-    font-size: 1.6rem;
-    font-weight: 700;
-    text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color-black;
+  line-height: 0;
 }
-
 
 // .heading-gradient {
 //     background-image: linear-gradient(to right, $color, $color);
@@ -64,12 +64,10 @@ body {
 //     color: transparent;
 // }
 
-
-
 .paragraph {
-    font-size: 1.68rem;
-    font-family: "Roboto", sans-serif;
-    color: $color-grey;
-    font-weight: 400;
-    word-spacing: 0.1rem;
+  font-size: 1.68rem;
+  font-family: "Roboto", sans-serif;
+  color: $color-grey;
+  font-weight: 400;
+  word-spacing: 0.1rem;
 }

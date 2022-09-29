@@ -1,56 +1,87 @@
 .navigation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    // padding-bottom: 2rem;
-    background-color: $color-white;
-    border-bottom: 1px solid rgba($color-grey, 0.3);
-    z-index: 99999;
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 5rem;
+  // padding-bottom: 2rem;
+  background-color: $color-white;
+  border-bottom: 1px solid rgba($color-grey, 0.3);
+  z-index: 99999;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
+  @include addMediaQuery(tablet) {
+    padding: 0 0.5rem;
+  }
 
-    &__logo {
-        float: left;
-        margin-top: 2.7rem;
-        width: 8rem;
+  &__wrap {
+    display: flex;
+
+    @include addMediaQuery(tablet) {
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+
+  &__logo-box {
+    @include addMediaQuery(tablet) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    margin-top: 2.7rem;
+    height: 2rem;
+    margin-right: 3rem;
+
+    @include addMediaQuery(tablet) {
+      height: auto;
+      width: 7.5rem;
+      margin-right: 0;
+    }
+  }
+
+  &__nav {
+    float: left;
+    margin-top: 2.63rem;
+  }
+
+  &__list {
+    list-style: none;
+
+    @include addMediaQuery(tablet) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 3rem;
+    padding-bottom: 2rem;
+
+    @include addMediaQuery(tablet) {
+      margin-right: 2rem;
+      margin-left: 2rem;
     }
 
-    &__nav {
-        float: left;
-        margin-left: 7rem;
-        margin-top: 2.63rem;
+    &--select {
+      border-bottom: 3px solid $color-red;
     }
+  }
 
-    &__list {
-        list-style: none;
+  &__link {
+    text-decoration: none;
+    color: $color-black;
+    font-size: 1.375rem;
+    font-family: "Google Sans Regular", sans-serif;
+    font-weight: 300;
+    padding: 1rem 0rem;
+
+    &--select {
+      color: $color-red;
     }
-
-    &__item {
-        display: inline-block;
-        margin-right: 3rem;
-        padding-bottom: 2rem;
-
-        @include addMediaQuery(phone-l) {
-            display: block;
-            margin: 0.5rem 0;
-        }
-
-        &--select {
-            border-bottom: 3px solid $color-red;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-        color: $color-black;
-        font-size: 1.375rem;
-        font-family: 'Google Sans Regular', sans-serif;
-        font-weight: 300;
-        padding: 1rem 0rem;
-
-        &--select {
-            color: $color-red;
-        }
-    }
+  }
 }

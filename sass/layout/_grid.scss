@@ -11,6 +11,14 @@
         max-width: 50rem;
     }
 
+    &--full {
+        max-width: $grid-width;
+
+        @include addMediaQuery(tablet) {
+            max-width: $grid-width;
+        }
+    }
+
     @include clearfix;
 
     [class^="col-"] {

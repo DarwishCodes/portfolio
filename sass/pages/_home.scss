@@ -1,23 +1,24 @@
 .section-project {
-    padding: 0rem 5rem 30rem 5rem;
+  padding: 5rem 5rem 10rem 5rem;
 
-    @include addMediaQuery(phone-m) {
-        padding: 0rem 0 30rem 0;
-    }
+  @include addMediaQuery(tablet) {
+    padding: 0rem 0 30rem 0;
+  }
 }
 
-.section-form {
-    padding: 0rem 5rem 30rem 5rem;
+.footer {
+  padding: 15rem 5rem 10rem 5rem;
+  background-color: rgba($color-indigo-light, 0.2);
 
-    @include addMediaQuery(phone-m) {
-        padding: 0rem 0 30rem 0;
-    }
+  @include addMediaQuery(tablet) {
+    padding: 15rem 0 10rem 0;
+  }
 }
 
 .section-about {
-    padding: 0rem 5rem 30rem 5rem;
+  padding: 5rem 5rem 10rem 5rem;
 
-    @include addMediaQuery(phone-m) {
-        padding: 0rem 0 30rem 0;
-    }
+  @include addMediaQuery(tablet) {
+    padding: 0rem 0 30rem 0;
+  }
 }

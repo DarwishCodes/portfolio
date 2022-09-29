@@ -20,8 +20,10 @@
 <body>
     <nav>
         <div class="navigation" id="navbar">
-            <div class="row">
-                <img src="img/logo-darwish.png" alt="Logo" class="navigation__logo">
+            <div class="navigation__wrap">
+                <div class="navigation__logo-box">
+                    <img src="img/logo-darwish.png" alt="Logo" class="navigation__logo">
+                </div>
                 <div class="navigation__nav">
                     <ul class="navigation__list">
                         <li class="navigation__item navigation__item--select"><a href="#" class="navigation__link navigation__link--select">Home</a></li>
@@ -53,9 +55,7 @@
                 <img class="header__image" src="img/laptop.png" alt="Laptop">
             </div>
         </div>
-        <div class="u-center-text">
-            <a href="#" class="icon-link header__view-more"><i class="icon ion-ios-arrow-down icon-link__arrow"></i></a>
-        </div>
+        <a href="#" class="icon-link"><i class="icon ion-ios-arrow-down icon-link__arrow"></i></a>
 
     </header>
     <script>
@@ -64,6 +64,7 @@
         var getDOM = {
             html: document.querySelector('html'),
             header: document.querySelector('.header'),
+            nav: document.querySelector('.navigation'),
             headImg: document.querySelector('.header__image'),
             headBackImg: document.querySelector('.header__background-image'),
             navigation: document.querySelector('.navigation')
@@ -71,16 +72,18 @@
 
         document.addEventListener('scroll', function () {
             currentX = getDOM.html.scrollTop;
+            console.log(getDOM.nav.offsetHeight );
 
             if (currentX < getDOM.header.clientHeight / 0.25) {
                 translateToBottom = currentX / 30;
                 translateToBottom2 = currentX / 10;
                 getDOM.headImg.style.transform = "translateY(" + translateToBottom + "rem)";
                 getDOM.headBackImg.style.transform = "translateY(" + translateToBottom2 + "rem)";
+                
             }
 
             if (currentX > prevX) {
-                getDOM.navigation.style.transform = "translateY(-7.3rem)";
+                getDOM.navigation.style.transform = "translateY(-" + getDOM.nav.offsetHeight / 10 + "rem)";
             } else if (currentX < prevX) {
                 getDOM.navigation.style.transform = "translateY(0rem)";
             }
@@ -232,82 +235,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__image-box">
-                                <img class="card__image  card__image--disable-scroll" src="img/website--1.png" alt="Preoject 1">
-                            </div>
-                            <div class="card__text-block">
-                                <span class="card__title"><a href="#" class="card__link">Project 1</a></span>
-                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="card__languages">
-                                <span class="card__code card__code--css">CSS</span>
-                                <span class="card__code card__code--js">JavaScript</span>
-                                <span class="card__code card__code--php">PHP</span>
-                                <span class="card__code card__code--mysql">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__image-box">
-                                <img class="card__image" src="img/website--2.png" alt="Preoject 1">
-                            </div>
-                            <div class="card__text-block">
-                                <span class="card__title"><a href="#" class="card__link">Project 1</a></span>
-                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="card__languages">
-                                <span class="card__code card__code--css">CSS</span>
-                                <span class="card__code card__code--js">JavaScript</span>
-                                <span class="card__code card__code--php">PHP</span>
-                                <span class="card__code card__code--mysql">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__image-box">
-                                <img class="card__image" src="img/website--3.png" alt="Preoject 1">
-                            </div>
-                            <div class="card__text-block">
-                                <span class="card__title"><a href="#" class="card__link">Project 1</a></span>
-                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="card__languages">
-                                <span class="card__code card__code--css">CSS</span>
-                                <span class="card__code card__code--js">JavaScript</span>
-                                <span class="card__code card__code--php">PHP</span>
-                                <span class="card__code card__code--mysql">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3">
-                        <div class="card">
-                            <div class="card__image-box">
-                                <img class="card__image" src="img/website--4.png" alt="Preoject 1">
-                            </div>
-                            <div class="card__text-block">
-                                <span class="card__title"><a href="#" class="card__link">Project 1</a></span>
-                                <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="card__languages">
-                                <span class="card__code card__code--css">CSS</span>
-                                <span class="card__code card__code--js">JavaScript</span>
-                                <span class="card__code card__code--php">PHP</span>
-                                <span class="card__code card__code--mysql">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
 
         <div class="section-form">
-            <div class="row">
+            <div class="row row--full">
                 <div class="u-center-text u-margin-bottom-large">
                     <h2 class="heading-secondry">Contact me</h2>
                 </div>
@@ -318,6 +251,9 @@
                             <input type="email" placeholder=" " id="email" class="form__input" required>
                             <label class="form__label" for="email">Email</label>
                             <span class="form__input-border"></span>
+                        </div>
+                        <div class="form__group">
+                            <textarea id="text" placeholder="Enter message" class="form__text" required></textarea>
                         </div>
                         <div class="u-right-text u-margin-top-medium">
                             <button id="btn-submit" class="btn form__btn">Submit
