@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -23,7 +25,7 @@
           <div class="navigation__logo-box">
             <a href="#">
               <img
-                src="img/logo-darwish.png"
+                src="img/logo-darwish--2.png"
                 alt="Logo"
                 class="navigation__logo"
               />
@@ -47,28 +49,32 @@
       </div>
     </nav>
     <header class="header" id="welcome-section">
-      <div class="header__background">
+      <!-- <div class="header__background">
         <img
           class="header__background-image"
           src="img/logo-3-slash.png"
           alt="Logo Hexagon"
         />
+      </div> -->
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Hello!</span>
+          <span class="heading-primary--sub"
+            ><span class="heading--light"
+              >I'm Muhammad Darwish, a passionate Full-stack web developer.
+            </span>
+            I love 2 things:
+            <br />
+            ☕ Morning coffee <br />
+            👍 and a satisfied client :)
+          </span>
+        </h1>
       </div>
-      <div class="row">
-        <div class="col-1-of-2">
-          <div class="header__text-box">
-            <h1 class="heading-primary">
-              <span class="heading-primary--main">Hello, there!</span>
-              <span class="heading-primary--sub"
-                >Looking for a Web Developer?</span
-              >
-            </h1>
-          </div>
-        </div>
-        <div class="col-1-of-2">
-          <img class="header__image" src="img/laptop.png" alt="Laptop" />
-        </div>
+
+      <div class="header__laptop">
+        <div id="laptop"></div>
       </div>
+
       <a href="#main" class="icon-link"
         ><i class="icon ion-ios-arrow-down icon-link__arrow"></i
       ></a>
@@ -81,7 +87,7 @@
           </div>
           <div class="col-1-of-2">
             <p class="paragraph">
-              You are looking for a talented, responsible and promising
+              Are you looking for a talented, responsible and promising
               specialist, who will make your ideas come true and solve different
               kinds of problems in front-end development? Then you made the
               right choice.
@@ -114,13 +120,13 @@
       </div>
       <div class="section-project" id="projects">
         <div class="projects">
-          <div class="projects__background">
+          <!-- <div class="projects__background">
             <img
               class="projects__background-image"
               src="img/logo-3-slash.png"
               alt="Logo Hexagon"
             />
-          </div>
+          </div> -->
           <div class="row">
             <div class="u-center-text u-margin-bottom-large">
               <h2 class="heading-secondry">Some Projects</h2>
@@ -140,9 +146,19 @@
                     ><a
                       href="https://darwishcodes.github.io/crypto/"
                       class="card__link"
-                      >Crypto &rarr;</a
+                      >Crypto</a
                     ></span
                   >
+                  <div class="u-center-text">
+                    <button
+                      onclick="location.href='https://darwishcodes.github.io/crypto/'"
+                      class="btn form__btn btn--color-green"
+                    >
+                      Visit Website
+                      <span class="btn__ripple-layer"></span>
+                      <span class="btn__ripple"></span>
+                    </button>
+                  </div>
                 </div>
                 <div class="card__languages">
                   <span class="card__code card__code--css">CSS</span>
@@ -163,9 +179,19 @@
                     ><a
                       href="https://darwishcodes.github.io/cdoc/"
                       class="card__link"
-                      >CDOC &rarr;</a
+                      >CDOC</a
                     ></span
                   >
+                  <div class="u-center-text">
+                    <button
+                      onclick="location.href='https://darwishcodes.github.io/cdoc/'"
+                      class="btn form__btn btn--color-green"
+                    >
+                      Visit Website
+                      <span class="btn__ripple-layer"></span>
+                      <span class="btn__ripple"></span>
+                    </button>
+                  </div>
                 </div>
                 <div class="card__languages">
                   <span class="card__code card__code--css">CSS</span>
@@ -186,32 +212,49 @@
                     ><a
                       href="https://darwishcodes.github.io/dwallet/"
                       class="card__link"
-                      >Dwallet &rarr;</a
+                      >Dwallet</a
                     ></span
                   >
+                  <div class="u-center-text">
+                    <button
+                      onclick="location.href='https://darwishcodes.github.io/dwallet/'"
+                      class="btn form__btn btn--color-green"
+                    >
+                      Visit Website
+                      <span class="btn__ripple-layer"></span>
+                      <span class="btn__ripple"></span>
+                    </button>
+                  </div>
                 </div>
                 <div class="card__languages">
                   <span class="card__code card__code--css">CSS</span>
                   <span class="card__code card__code--js">JavaScript</span>
                 </div>
               </div>
-              <div class="card card--h-35 project-tile">
+              <div class="card card--h-41 project-tile">
                 <div class="card__image-box card__image-box--h-18">
-                  <a href="https://darwishcodes.github.io/juventus/"
-                    ><img
-                      class="card__image"
-                      src="img/juventus.png"
-                      alt="Preoject 1"
+                  <a href="https://darwishcodes.github.io/bb/"
+                    ><img class="card__image" src="img/bb.png" alt="Preoject 1"
                   /></a>
                 </div>
                 <div class="card__text-block">
                   <span class="card__title"
                     ><a
-                      href="https://darwishcodes.github.io/juventus/"
+                      href="https://darwishcodes.github.io/bb/"
                       class="card__link"
-                      >Juventus &rarr;</a
+                      >Beautiful Beginnings</a
                     ></span
                   >
+                  <div class="u-center-text">
+                    <button
+                      onclick="location.href='https://darwishcodes.github.io/bb/'"
+                      class="btn form__btn btn--color-green"
+                    >
+                      Visit Website
+                      <span class="btn__ripple-layer"></span>
+                      <span class="btn__ripple"></span>
+                    </button>
+                  </div>
                 </div>
                 <div class="card__languages">
                   <span class="card__code card__code--css">CSS</span>
@@ -219,7 +262,7 @@
                   <span class="card__code card__code--jquery">jQuery</span>
                 </div>
               </div>
-              <div class="card card--h-35 project-tile">
+              <div class="card card--h-41 project-tile">
                 <div class="card__image-box card__image-box--h-18">
                   <a href="https://darwishcodes.github.io/tripra/"
                     ><img
@@ -233,9 +276,19 @@
                     ><a
                       href="https://darwishcodes.github.io/tripra/"
                       class="card__link"
-                      >Tripra &rarr;</a
+                      >Tripra</a
                     ></span
                   >
+                  <div class="u-center-text">
+                    <button
+                      onclick="location.href='https://darwishcodes.github.io/tripra/'"
+                      class="btn form__btn btn--color-green"
+                    >
+                      Visit Website
+                      <span class="btn__ripple-layer"></span>
+                      <span class="btn__ripple"></span>
+                    </button>
+                  </div>
                 </div>
                 <div class="card__languages">
                   <span class="card__code card__code--css">CSS</span>
@@ -322,11 +375,21 @@
           </div>
         </div>
 
-        <a href="#">
-          <img class="image image--3" src="img/logo-3.png" alt="Full Logo" />
-        </a>
+        <a href="#" class="icon-link icon-link--relative"
+          ><i class="icon ion-ios-arrow-up icon-link__arrow"></i
+        ></a>
       </footer>
     </main>
   </body>
-  <script src="js/script.js"></script>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script>
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById("laptop"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "./js/Laptop.json",
+    });
+  </script>
 </html>

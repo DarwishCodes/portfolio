@@ -1,8 +1,22 @@
 .header {
   position: relative;
-  width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include addMediaQuery(tablet) {
+    flex-direction: column;
+  }
+
+  &__laptop {
+    width: 40%;
+
+    @include addMediaQuery(tablet) {
+      width: 70%;
+    }
+  }
 
   &__background {
     position: absolute;
@@ -31,10 +45,17 @@
 
   &__text-box {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 10%;
+    // position: absolute;
+    // top: 50%;
+    // left: 10%;
+    width: 40rem;
     z-index: 5;
+
+    @include addMediaQuery(tablet) {
+      display: block;
+      width: auto;
+      margin: 0 2rem;
+    }
   }
 
   &__image {

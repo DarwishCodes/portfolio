@@ -1,5 +1,5 @@
 body {
-  font-family: "Google Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.7;
@@ -17,7 +17,7 @@ body {
     letter-spacing: 0;
     font-size: 5rem;
     font-weight: 500;
-    color: $color-primary-dark;
+    color: $color-white;
 
     @include addMediaQuery(laptop) {
       font-size: 3.1rem;
@@ -25,13 +25,13 @@ body {
   }
 
   &--sub {
-    font-family: "Google Sans Regular", sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-transform: none;
     display: block;
     letter-spacing: 0;
     font-size: 2.5rem;
     font-weight: 300;
-    color: $color-primary-dark;
+    color: $color-white;
 
     @include addMediaQuery(laptop) {
       font-size: 1.89rem;
@@ -40,10 +40,10 @@ body {
 }
 
 .heading-secondry {
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 3.6rem;
   display: inline-block;
-  color: $color-black;
+  color: $color-white;
   font-weight: 400;
   letter-spacing: -0.01555rem;
   line-height: 2.4375rem;
@@ -53,8 +53,12 @@ body {
   font-size: 2.1rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: $color-black;
+  color: $color-white;
   line-height: 0;
+}
+
+.heading--light {
+  font-weight: 200;
 }
 
 // .heading-gradient {
@@ -66,8 +70,8 @@ body {
 
 .paragraph {
   font-size: 1.68rem;
-  font-family: "Roboto", sans-serif;
-  color: $color-grey;
+  font-family: "Montserrat", sans-serif;
+  color: $color-white;
   font-weight: 400;
   word-spacing: 0.1rem;
 }

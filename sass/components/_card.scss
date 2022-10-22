@@ -1,7 +1,8 @@
 .card {
   display: block;
-  font-family: "Roboto", sans-serif;
-  height: 44rem;
+  font-family: "Montserrat", sans-serif;
+  // height: 44rem; default
+  height: 41rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   overflow: hidden;
@@ -23,17 +24,19 @@
   &__container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__image-box {
     overflow: hidden;
-    height: 27rem;
+    // height: 27rem default;
+    height: 18rem;
     border: 1px solid rgba($color-black, 0.2);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    opacity: 0;
+    opacity: 1;
     transition: all ease 0.2s;
 
     @include addMediaQuery(tablet) {
@@ -62,8 +65,9 @@
   &__text-block {
     margin-top: 3rem;
     margin-bottom: 7rem;
-    transform: translateY(-18.21rem);
-    transition: all 0.5s ease;
+    text-align: center;
+    // transform: translateY(-18.21rem);
+    // transition: all 0.5s ease;
 
     @include addMediaQuery(tablet) {
       transform: translateY(0rem);
@@ -71,19 +75,21 @@
   }
 
   &__link {
-    color: $color-black;
+    color: $color-white;
+    text-decoration: none;
   }
 
   &__title {
-    display: inline-block;
-    color: $color-black;
+    display: block;
+    color: $color-white;
     font-size: 2.5rem;
-    transform: scale(1);
-    transition: all ease 0.3s;
+    margin-bottom: 2rem;
+    // transform: scale(1);
+    // transition: all ease 0.3s;
   }
 
   &__description {
-    color: $color-grey;
+    color: $color-white;
     font-size: 1.52rem;
     margin-bottom: 2rem;
     transform: scale(1);
@@ -96,6 +102,7 @@
 
   &__languages {
     margin-left: 1rem;
+    text-align: center;
 
     @include addMediaQuery(tablet) {
       margin-left: 0rem;
@@ -114,6 +121,7 @@
     border-radius: 3px;
     transform: translateY(2.25rem);
     padding: 0.2rem 0.5rem;
+    text-align: center;
 
     @include addMediaQuery(laptop) {
       font-size: 1.31rem;
@@ -182,13 +190,13 @@
     }
   }
 
-  &:hover &__title {
-    transform: scale(0.8);
+  // &:hover &__title {
+  //   transform: scale(0.8);
 
-    @include addMediaQuery(tablet) {
-      transform: scale(1);
-    }
-  }
+  //   @include addMediaQuery(tablet) {
+  //     transform: scale(1);
+  //   }
+  // }
 
   &:hover &__description {
     transform: scale(0.94);
@@ -206,7 +214,7 @@
   }
 
   &:hover &__image-box &__image--animate {
-    animation: thumbnail 20s ease 1s infinite;
+    animation: thumbnail 20s ease 0.4s infinite;
   }
 
   &:hover &__image-box &__image--disable-scroll {
@@ -214,10 +222,10 @@
   }
 
   &:hover &__link {
-    color: $color-primary-dark;
+    color: $color-white;
 
     &:hover {
-      color: $color-secondry-dark;
+      color: $color-white;
     }
   }
 }

@@ -2,16 +2,16 @@
   padding: 5rem 5rem 10rem 5rem;
 
   @include addMediaQuery(tablet) {
-    padding: 0rem 0 30rem 0;
+    padding: 0rem 0 5rem 0;
   }
 }
 
 .footer {
-  padding: 15rem 5rem 10rem 5rem;
-  background-color: rgba($color-indigo-light, 0.2);
+  padding: 5rem 5rem 10rem 5rem;
+  // background-color: rgba($color-indigo-light, 0.2);
 
   @include addMediaQuery(tablet) {
-    padding: 15rem 0 10rem 0;
+    padding: 5rem 0 10rem 0;
   }
 }
 

@@ -6,16 +6,6 @@
   box-sizing: inherit;
 }
 
-@font-face {
-  font-family: "Google Sans";
-  src: url("fonts/goolge-sans-bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Google Sans Regular";
-  src: url("fonts/goolge-sans-regular.woff2") format("woff2");
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -23,6 +13,11 @@ html {
 
 body {
   box-sizing: border-box;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(#112564, 1),
+    rgba(#020230, 1)
+  );
 }
 
 ::selection {
