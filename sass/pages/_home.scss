@@ -19,6 +19,51 @@
   padding: 5rem 5rem 10rem 5rem;
 
   @include addMediaQuery(tablet) {
-    padding: 0rem 0 30rem 0;
+    padding: 0rem 0 10rem 0;
+  }
+
+  &__logo {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  &__logo--2 {
+    width: 20rem;
+    height: 20rem;
+    fill: #ffffff;
+    animation: css3 7s ease-in-out infinite;
+  }
+
+  &__logo-box {
+    position: relative;
+    text-align: center;
+  }
+
+  .logo-animation {
+    // position: absolute;
+    // display: block;
+    // width: 5rem;
+    // height: 3px;
+    // background-color: #ffffff;
+    // transform-origin: 50% 50%;
+    // transform: translate(5.1rem, 3rem);
+    // z-index: -1;
+    // animation: css3 3s ease-in-out infinite;
+  }
+
+  .stack {
+    &--1 {
+      animation: stack-1 5s ease-in-out infinite;
+    }
+
+    &--2 {
+      animation: stack-1 5s ease-in-out infinite;
+      animation-delay: 0.5s;
+    }
+
+    &--3 {
+      animation: stack-1 5s ease-in-out infinite;
+      animation-delay: 1s;
+    }
   }
 }

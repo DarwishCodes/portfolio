@@ -73,7 +73,7 @@
 .icon-link {
   display: inline-block;
   position: absolute;
-  bottom: 5rem;
+  bottom: 1rem;
   left: 50%;
   background-color: $color-white;
   text-decoration: none;
@@ -86,6 +86,15 @@
   border-radius: 50%;
   animation: clickme 3s ease 0s infinite;
   transition: all 0.3s ease;
+
+  &--scroll-down {
+    @include addMediaQuery(tablet) {
+      position: fixed;
+      bottom: 5rem;
+      right: 2rem;
+      left: unset;
+    }
+  }
 
   &--relative {
     position: relative;

@@ -94,3 +94,62 @@
     transform: translateY(2.25rem);
   }
 }
+
+@keyframes stack-1 {
+  0% {
+    transform: translateY(0rem);
+  }
+  25% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes css3 {
+  0% {
+    fill: #ffffff;
+  }
+
+  25% {
+    fill: #20caff;
+  }
+  50% {
+    fill: #ff7675;
+  }
+  100% {
+    fill: #ffffff;
+  }
+}
+
+@keyframes stack-2 {
+}
+
+@keyframes stack-3 {
+}
+
+// @keyframes wiggle-header {
+//   0% {
+//     top: 3px;
+//     left: -9px;
+//   }
+
+//     50% {
+//     top: 0px;
+//     left: -15px;
+//   }
+
+//   50% {
+//     top: 0px;
+//     left: -15px;
+//   }
+
+//   100% {
+//     top: 3px;
+//     left: -9px;
+//   }
+// }

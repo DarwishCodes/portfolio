@@ -12,6 +12,7 @@
 
   @include addMediaQuery(tablet) {
     padding: 0 0.5rem;
+    position: unset;
   }
 
   &__wrap {
@@ -79,6 +80,10 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     padding: 1rem 0rem;
+
+    @include addMediaQuery(phone-l) {
+      font-size: 1.1rem;
+    }
 
     &--select {
       color: $color-red;
