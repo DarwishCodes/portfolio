@@ -168,6 +168,18 @@
       background-color: $color-indigo-light;
       transition: all 0.3s ease 0.35s;
     }
+
+    &--angular {
+      color: $color-white;
+      background-color: $color-red;
+      transition: all 0.3s ease 0.35s;
+    }
+
+    &--react {
+      color: $color-black;
+      background-color: $color-cyan;
+      transition: all 0.3s ease 0.35s;
+    }
   }
 
   &:hover {

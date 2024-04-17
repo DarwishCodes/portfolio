@@ -392,6 +392,14 @@ body {
       color: #202124;
       background-color: #aab6fe;
       transition: all 0.3s ease 0.35s; }
+    .card__code--angular {
+      color: #fff;
+      background-color: #b71c1c;
+      transition: all 0.3s ease 0.35s; }
+    .card__code--react {
+      color: #202124;
+      background-color: #72d4f3;
+      transition: all 0.3s ease 0.35s; }
   .card:hover {
     transform: translateY(0rem); }
   .card:hover .card__text-block {
