@@ -20,9 +20,13 @@
         rgba($color-white, 0.8)
       ),
       url(../img/upwork.png), $color-white;
+    background-position: 0 0;
+
     background-size: 10rem;
     // background-color: $color-blue-1;
     border-radius: 150px;
+
+    animation: animatedBackground 500s linear infinite;
 
     @include addMediaQuery(tablet) {
       border-radius: 80px;

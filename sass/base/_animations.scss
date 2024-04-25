@@ -132,6 +132,16 @@
 @keyframes stack-3 {
 }
 
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  /*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
 // @keyframes wiggle-header {
 //   0% {
 //     top: 3px;
