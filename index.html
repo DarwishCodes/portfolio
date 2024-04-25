@@ -15,6 +15,12 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <title id="title">Muhammad Darwish</title>
@@ -428,6 +434,61 @@
           </div>
         </div>
       </div>
+      <section class="section-testimonial">
+        <div class="row">
+          <div class="u-center-text u-margin-bottom-large">
+            <h2 class="heading-secondry">Testimonials</h2>
+          </div>
+          <div class="testimonial-card__box">
+            <div class="testimonial-card">
+              <div class="testimonial-card__text-block">
+                <div class="testimonial-card__arrow-box">
+                  <div class="testimonial-card__arrow prev">
+                    <i class="fa-regular fa-arrow-left"></i>
+                  </div>
+                  <div class="testimonial-card__arrow next">
+                    <i class="fa-regular fa-arrow-right"></i>
+                  </div>
+                </div>
+                <div class="owl-carousel">
+                  <p class="testimonial-card__text">
+                    "Highly skilled on front-end development and design with
+                    great communication skills, I recommed working with Muhammad
+                    if you want something neat."
+                  </p>
+                  <p class="testimonial-card__text">
+                    "Excellent work! Muhammad is quick, has attention to detail
+                    and is a pleasure to work with! Will definetally hire again"
+                  </p>
+                  <p class="testimonial-card__text">
+                    "Great, fast work! Thanks a lot!"
+                  </p>
+                  <p class="testimonial-card__text">
+                    "Great freelancer! Very easy to work with and completed the
+                    task quickly! We recommend everyone to hire this developer!"
+                  </p>
+                  <p class="testimonial-card__text">
+                    "Did exactly what I wanted, when asked for and made some
+                    changes after, to fix up some unintended problems."
+                  </p>
+                  <p class="testimonial-card__text">
+                    "Muhammad is a great talented person, he managed to finish
+                    my last minute project quickly, he founds solutions for each
+                    problem, he responded to my messages quickly. I was happy
+                    working with him and for sure I will work with him once
+                    again."
+                  </p>
+                </div>
+              </div>
+              <!-- <img
+                class="testimonial-card__image"
+                src="img/medal-svgrepo-com.svg"
+                alt="5 Stars"
+              /> -->
+            </div>
+          </div>
+        </div>
+      </section>
       <footer id="contact" class="footer">
         <div class="row row--full">
           <div class="u-center-text u-margin-bottom-large">
@@ -453,34 +514,6 @@
                 <span class="btn__ripple"></span>
               </button>
             </div>
-
-            <!-- <div class="form__paper">
-                    <form action="#" class="form">
-                        <div class="form__group">
-                            <input type="email" placeholder=" " id="email" class="form__input" required>
-                            <label class="form__label" for="email">Email</label>
-                            <span class="form__input-border"></span>
-                        </div>
-                        <div class="form__group">
-                            <textarea id="text" placeholder="Enter message" class="form__text" required></textarea>
-                        </div>
-                        <div class="u-right-text u-margin-top-medium">
-                            <button id="btn-submit" class="btn form__btn">Submit
-                                <span class="btn__ripple-layer"></span>
-                                <span class="btn__ripple"></span>
-                            </button>
-                        </div>
-                    </form>
-                    <div class="form__social-icons">
-                        <a class="form__social-icon-box" href="#"><i
-                                class="icon ion-logo-facebook form__social-icon"></i></a>
-                        <a class="form__social-icon-box" href="#"><i
-                                class="icon ion-logo-twitter form__social-icon"></i></a>
-                        <a class="form__social-icon-box" id="profile-link" target="_blank"
-                            href="https://github.com/DarwishCodes"><i
-                                class="icon ion-logo-github form__social-icon"></i></a>
-                    </div>
-                </div> -->
           </div>
           <div class="col-1-of-2 u-center-text">
             <div class="u-margin-bottom-medium">
@@ -515,6 +548,30 @@
   <!-- <script src="js/script.js"></script> -->
   <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        items: 1,
+        autoHeight: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+      });
+      $(".prev").click(function () {
+        $(".owl-carousel").trigger("prev.owl.carousel");
+      });
+
+      $(".next").click(function () {
+        $(".owl-carousel").trigger("next.owl.carousel");
+      });
+    });
+  </script>
   <script>
     var animation = bodymovin.loadAnimation({
       container: document.getElementById("laptop"),

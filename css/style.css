@@ -529,6 +529,53 @@ body {
     width: 23rem;
     margin: 0 auto; }
 
+.testimonial-card {
+  border-radius: 150px;
+  padding: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%; }
+  @media (max-width: 48em) {
+    .testimonial-card {
+      padding: 2.5rem;
+      border-radius: 80px; } }
+  .testimonial-card__box {
+    padding-bottom: 2rem;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../img/upwork.png), #fff;
+    background-size: 10rem;
+    border-radius: 150px; }
+    @media (max-width: 48em) {
+      .testimonial-card__box {
+        border-radius: 80px; } }
+  .testimonial-card__text-block {
+    width: 80%; }
+  .testimonial-card__text {
+    color: #202124;
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 0 1rem; }
+    @media (max-width: 48em) {
+      .testimonial-card__text {
+        font-size: 2rem; } }
+    @media (max-width: 23.4375em) {
+      .testimonial-card__text {
+        font-size: 2rem; } }
+  .testimonial-card__arrow-box {
+    display: flex; }
+  .testimonial-card__arrow {
+    font-size: 4rem;
+    cursor: pointer;
+    color: #202124;
+    margin: 0 1rem; }
+    @media (max-width: 48em) {
+      .testimonial-card__arrow {
+        font-size: 2.5rem; } }
+  .testimonial-card__image {
+    fill: #f9636b;
+    width: 50%;
+    margin-top: 7rem; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -772,6 +819,12 @@ body {
   @media (max-width: 48em) {
     .footer {
       padding: 5rem 0 10rem 0; } }
+
+.section-testimonial {
+  padding: 5rem 5rem 10rem 5rem; }
+  @media (max-width: 48em) {
+    .section-testimonial {
+      padding: 0rem 0 5rem 0; } }
 
 .section-about {
   padding: 5rem 5rem 10rem 5rem; }

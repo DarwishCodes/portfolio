@@ -2,25 +2,20 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
-
 @import "components/button";
 @import "components/card";
 @import "components/form";
 @import "components/image";
-
-
+@import "components/testimonial-card";
 
 @import "layout/grid";
 @import "layout/header";
 @import "layout/navigation";
 @import "layout/projects";
 
-
 @import "pages/home";
-
