@@ -2,7 +2,7 @@
   padding: 5rem 5rem 10rem 5rem;
 
   @include addMediaQuery(tablet) {
-    padding: 0rem 0 5rem 0;
+    padding: 5rem 0 5rem 0;
   }
 }
 
