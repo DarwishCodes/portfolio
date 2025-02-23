@@ -23,9 +23,9 @@
     background-position: 0 0;
 
     background-size: 10rem;
-    // background-color: $color-blue-1;
-    border-radius: 150px;
-
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
     animation: animatedBackground 500s linear infinite;
 
     @include addMediaQuery(tablet) {

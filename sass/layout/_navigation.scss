@@ -5,9 +5,10 @@
   width: 100%;
   padding: 0 5rem;
   // padding-bottom: 2rem;
-  background-color: #112564;
-  border-bottom: 1px solid rgba($color-white, 0);
   z-index: 99999;
+  background: rgba(17, 37, 100, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   @include addMediaQuery(tablet) {
@@ -17,6 +18,11 @@
 
   &__wrap {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    align-items: center;
 
     @include addMediaQuery(tablet) {
       flex-direction: column;
@@ -33,7 +39,6 @@
   }
 
   &__logo {
-    margin-top: 2.7rem;
     height: 2rem;
     margin-right: 3rem;
 
