@@ -21,6 +21,10 @@
   @include addMediaQuery(tablet) {
     padding: 0rem 0 5rem 0;
   }
+
+  @include addMediaQuery(phone-m) {
+    min-height: 50rem;
+  }
 }
 
 .section-about {

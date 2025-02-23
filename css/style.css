@@ -606,7 +606,7 @@ body {
         font-size: 2rem; } }
     @media (max-width: 23.4375em) {
       .testimonial-card__text {
-        font-size: 2rem; } }
+        font-size: 1.2rem; } }
   .testimonial-card__arrow-box {
     display: flex; }
   .testimonial-card__arrow {
@@ -903,6 +903,9 @@ body {
   @media (max-width: 48em) {
     .section-testimonial {
       padding: 0rem 0 5rem 0; } }
+  @media (max-width: 23.4375em) {
+    .section-testimonial {
+      min-height: 50rem; } }
 
 .section-about {
   padding: 10rem 2rem;
