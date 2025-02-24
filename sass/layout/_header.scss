@@ -16,7 +16,7 @@
   }
 
   &__laptop {
-    width: 61rem;
+    width: 100%;
 
     @include addMediaQuery(tablet) {
       width: 70%;
@@ -59,7 +59,7 @@
 
   &__text-box {
     display: block;
-    width: 40rem;
+    width: 100%;
     z-index: 5;
     position: relative;
     transition: all 0.2s;
@@ -69,11 +69,12 @@
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 1rem;
 
     @include addMediaQuery(tablet) {
       display: block;
       width: auto;
-      margin: 0 2rem;
+      margin: 0 0 0 1rem;
       margin-bottom: 3rem;
       margin-top: 3rem;
     }
@@ -91,6 +92,11 @@
       transition: all 0.2s;
       transform-origin: top;
       border-radius: 20px;
+
+      @include addMediaQuery(tablet) {
+        width: 102%;
+        height: 102%;
+      }
     }
 
     // &:hover:before {
@@ -112,6 +118,11 @@
       transition: all 0.2s;
       transform-origin: bottom;
       border-radius: 20px;
+
+      @include addMediaQuery(tablet) {
+        width: 102%;
+        height: 102%;
+      }
     }
 
     &:hover:after {
