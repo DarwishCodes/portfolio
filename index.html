@@ -894,64 +894,6 @@ function initLaptopAnimation() {
       placeholder.style.opacity = '0';
     }
   });
-}  // Initialize carousel when in viewport using Intersection Observer
-  function initCarouselWhenVisible() {
-    const carousels = document.querySelectorAll('.owl-carousel');
-    if (!carousels.length) return;
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          $(entry.target).owlCarousel({
-            loop: true,
-            items: 1,
-            autoHeight: true,
-            autoplay: true,
-            autoplayHoverPause: true,
-          });
-          
-          // Set up carousel navigation buttons with passive listeners
-          $('.prev').click(function() {
-            $(entry.target).trigger('prev.owl.carousel');
-          });
-          
-          $('.next').click(function() {
-            $(entry.target).trigger('next.owl.carousel');
-          });
-          
-          // Stop observing once initialized
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1 // Trigger when 10% of the element is visible
-    });
-    
-    // Start observing all carousel elements
-    carousels.forEach(carousel => {
-      observer.observe(carousel);
-    });
-  }
-  
-  // Configure jQuery event handlers to use passive listeners when possible
-  if (typeof jQuery !== 'undefined') {
-    jQuery.event.special.touchstart = {
-      setup: function(_, ns, handle) {
-        this.addEventListener("touchstart", handle, { passive: true });
-      }
-    };
-    
-    jQuery.event.special.touchmove = {
-      setup: function(_, ns, handle) {
-        this.addEventListener("touchmove", handle, { passive: true });
-      }
-    };
-    
-    jQuery.event.special.mousewheel = {
-      setup: function(_, ns, handle) {
-        this.addEventListener("mousewheel", handle, { passive: true });
-      }
-    };
-  }
+} 
   </script>
 </html>
