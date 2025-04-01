@@ -781,24 +781,6 @@
     crossorigin="anonymous"
   ></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        items: 1,
-        autoHeight: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-      });
-      $(".prev").click(function () {
-        $(".owl-carousel").trigger("prev.owl.carousel");
-      });
-
-      $(".next").click(function () {
-        $(".owl-carousel").trigger("next.owl.carousel");
-      });
-    });
-  </script>
 <script>
   // Script loader utility
   function loadScript(src, callback = null, async = true, defer = true) {
@@ -846,7 +828,23 @@
       // After jQuery loads, load dependent scripts
       loadScript('js/owl.carousel.min.js', function() {
         // Initialize carousel only when it's in viewport
-        initCarouselWhenVisible();
+        // initCarouselWhenVisible();
+        $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        items: 1,
+        autoHeight: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+      });
+      $(".prev").click(function () {
+        $(".owl-carousel").trigger("prev.owl.carousel");
+      });
+
+      $(".next").click(function () {
+        $(".owl-carousel").trigger("next.owl.carousel");
+      });
+    });
       });
       
       // Load animation library separately
