@@ -1,63 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css"
-      rel="stylesheet"
-    />
-
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "Person",
-        "name": "Muhammad Darwish",
-        "url": "https://darwishcodes.work",
-        "sameAs": [
-          "https://www.upwork.com/freelancers/muhammaddarwish"
-        ],
-        "jobTitle": "Full-stack Web Developer",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance"
-        },
-        "knowsAbout": ["React.js", "Vue.js", "Angular", "JavaScript", "PHP", "Laravel", "MySQL"]
-      }
-    </script>
-    <link rel="canonical" href="https://darwishcodes.work/">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://darwishcodes.work/">
-    <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer">
-    <meta property="og:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
-    <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://darwishcodes.work/">
-    <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer">
-    <meta property="twitter:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
-    <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
-    <meta name="robots" content="index, follow">
-    <meta name="description" content="Muhammad Darwish - Passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. View my portfolio and hire me for your next web project.">
-    <meta name="keywords" content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer">
-    <meta name="author" content="Muhammad Darwish">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link
-      href="css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/hexagon.png" />
-    <title>Muhammad Darwish | Full-stack Web Developer | darwishcodes.work</title>  
-  </head>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+      <!-- Preconnect to important domains -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+      
+      <!-- Preload critical assets -->
+      <link rel="preload" href="img/logo-darwish--2.png" as="image" />
+      <link rel="preload" href="js/script.min.js" as="script" />
+      
+      <!-- Critical CSS inline -->
+      <style>
+        /* Critical CSS for above-the-fold content */
+        :root {
+          --color-primary: #0e153a;
+          --color-primary-light: #3d5af1;
+          --color-primary-dark: #0e153a;
+          --color-secondary: #22d1ee;
+          --color-white: #fff;
+          --color-black: #000;
+          --color-grey: #777;
+          --color-grey-light-1: #f7f7f7;
+          --color-grey-light-2: #eee;
+          --color-grey-dark: #999;
+          --color-grey-dark-2: #333;
+          --color-grey-dark-3: #444;
+        }
+        
+        *,
+        *::after,
+        *::before {
+          margin: 0;
+          padding: 0;
+          box-sizing: inherit;
+        }
+        
+        html {
+          font-size: 62.5%;
+          scroll-behavior: smooth;
+        }
+        
+        body {
+          box-sizing: border-box;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+          line-height: 1.7;
+          color: var(--color-grey-dark);
+          padding: 0rem;
+          overflow-x: hidden;
+        }
+        
+        .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 110;
+          background-color: var(--color-white);
+          box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+        }
+        
+        .navigation__wrap {
+          max-width: 120rem;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 2rem;
+        }
+        
+        .navigation__logo {
+          height: 5rem;
+          width: auto;
+        }
+        
+        .navigation__list {
+          list-style: none;
+          display: flex;
+        }
+        
+        .navigation__item {
+          margin-left: 3rem;
+        }
+        
+        .navigation__link {
+          text-decoration: none;
+          color: var(--color-grey-dark);
+          font-size: 1.6rem;
+          transition: all 0.2s;
+        }
+        
+        .header {
+          height: 100vh;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          margin-top: 7rem;
+        }
+        
+        .header__content {
+          width: 100%;
+          max-width: 120rem;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 2rem;
+        }
+        
+        .header__text-box {
+          flex: 0 0 50%;
+        }
+        
+        .header__laptop {
+          flex: 0 0 40%;
+          min-height: 30rem;
+        }
+        
+        .heading-primary {
+          font-size: 4rem;
+          font-weight: 500;
+          line-height: 1.2;
+          color: var(--color-primary);
+          margin-bottom: 2rem;
+        }
+        
+        .heading-primary--main {
+          display: block;
+          font-size: 5.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+        
+        .heading-primary--sub {
+          display: block;
+          font-size: 2rem;
+          font-weight: 400;
+          line-height: 1.6;
+        }
+        
+        .heading--light {
+          display: block;
+          margin-bottom: 1.5rem;
+        }
+      </style>
+      
+      <!-- Non-critical CSS loaded asynchronously -->
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" 
+            rel="stylesheet" media="print" onload="this.media='all'" />
+      <link rel="stylesheet" href="css/style.min.css" media="print" onload="this.media='all'" />
+      <link rel="stylesheet" href="css/owl.carousel.min.css" media="print" onload="this.media='all'" />
+      <link rel="stylesheet" href="css/owl.theme.default.min.css" media="print" onload="this.media='all'" />
+      <link href="css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+      
+      <!-- Fallback for browsers that don't support JS -->
+      <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link href="css/all.min.css" rel="stylesheet">
+      </noscript>
+      
+      <!-- Structured data -->
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Person",
+          "name": "Muhammad Darwish",
+          "url": "https://darwishcodes.work",
+          "sameAs": [
+            "https://www.upwork.com/freelancers/muhammaddarwish"
+          ],
+          "jobTitle": "Full-stack Web Developer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+          },
+          "knowsAbout": ["React.js", "Vue.js", "Angular", "JavaScript", "PHP", "Laravel", "MySQL"]
+        }
+      </script>
+      
+      <!-- Meta tags -->
+      <link rel="canonical" href="https://darwishcodes.work/">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="https://darwishcodes.work/">
+      <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer">
+      <meta property="og:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
+      <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
+      <meta property="twitter:card" content="summary_large_image">
+      <meta property="twitter:url" content="https://darwishcodes.work/">
+      <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer">
+      <meta property="twitter:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
+      <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
+      <meta name="robots" content="index, follow">
+      <meta name="description" content="Muhammad Darwish - Passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. View my portfolio and hire me for your next web project.">
+      <meta name="keywords" content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer">
+      <meta name="author" content="Muhammad Darwish">
+      
+      <link rel="shortcut icon" type="image/png" href="img/hexagon.png" />
+      <title>Muhammad Darwish | Full-stack Web Developer | darwishcodes.work</title>  
+    </head>
+    <!-- Body content goes here -->
   <body>
     <nav>
       <div class="navigation" id="navbar">
@@ -606,5 +758,134 @@
       autoplay: true,
       path: "./js/Laptop.json",
     });
+  </script>
+<script>
+  // Script loader utility
+  function loadScript(src, callback = null, async = true, defer = true) {
+    const script = document.createElement('script');
+    script.src = src;
+    
+    if (async) script.async = true;
+    if (defer) script.defer = true;
+    
+    if (callback) {
+      script.onload = callback;
+    }
+    
+    document.body.appendChild(script);
+  }
+  
+  // Load critical scripts immediately
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add passive event listeners for better scrolling performance
+    document.addEventListener('scroll', function() {}, { passive: true });
+    document.addEventListener('touchstart', function() {}, { passive: true });
+    document.addEventListener('touchmove', function() {}, { passive: true });
+    
+    // Initialize any critical functionality
+    const linkDown = document.getElementById('link-down');
+    if (linkDown) {
+      linkDown.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }, { passive: false });
+    }
+  });
+  
+  // Lazy load non-critical scripts
+  window.addEventListener('load', function() {
+    // Load jQuery first as it's a dependency for other scripts
+    loadScript('https://code.jquery.com/jquery-3.7.1.min.js', function() {
+      // After jQuery loads, load dependent scripts
+      loadScript('js/owl.carousel.min.js', function() {
+        // Initialize carousel only when it's in viewport
+        initCarouselWhenVisible();
+      });
+      
+      // Load animation library separately
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', function() {
+        // Initialize animation after library loads
+        initAnimation();
+      });
+    });
+  });
+  
+  // Initialize animation when animation library is loaded
+  function initAnimation() {
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById("laptop"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "./js/Laptop.json",
+    });
+  }
+  
+  // Initialize carousel when in viewport using Intersection Observer
+  function initCarouselWhenVisible() {
+    const carousels = document.querySelectorAll('.owl-carousel');
+    if (!carousels.length) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          $(entry.target).owlCarousel({
+            loop: true,
+            items: 1,
+            autoHeight: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+          });
+          
+          // Set up carousel navigation buttons with passive listeners
+          $('.prev').click(function() {
+            $(entry.target).trigger('prev.owl.carousel');
+          });
+          
+          $('.next').click(function() {
+            $(entry.target).trigger('next.owl.carousel');
+          });
+          
+          // Stop observing once initialized
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+    
+    // Start observing all carousel elements
+    carousels.forEach(carousel => {
+      observer.observe(carousel);
+    });
+  }
+  
+  // Configure jQuery event handlers to use passive listeners when possible
+  if (typeof jQuery !== 'undefined') {
+    jQuery.event.special.touchstart = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("touchstart", handle, { passive: true });
+      }
+    };
+    
+    jQuery.event.special.touchmove = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("touchmove", handle, { passive: true });
+      }
+    };
+    
+    jQuery.event.special.mousewheel = {
+      setup: function(_, ns, handle) {
+        this.addEventListener("mousewheel", handle, { passive: true });
+      }
+    };
+  }
   </script>
 </html>
