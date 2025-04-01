@@ -151,7 +151,50 @@
           display: block;
           margin-bottom: 1.5rem;
         }
-      </style>
+/* Fix for animation visibility and placeholder styling */
+
+.header__laptop {
+  position: relative;
+  width: 100%;
+  max-width: 707px;
+  height: 641px;
+  margin: 0 auto;
+}
+
+/* Placeholder image shows immediately */
+.laptop-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1; /* Make sure placeholder is above animation initially */
+  transition: opacity 0.3s ease;
+}
+
+/* Animation container starts hidden and appears later */
+.laptop-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2; /* Ensure animation is above placeholder when visible */
+}
+
+/* When animation is loaded, make it visible */
+.laptop-animation.loaded {
+  opacity: 1;
+}
+
+/* This ensures the placeholder properly hides when animation loads */
+.laptop-animation.loaded ~ .laptop-placeholder {
+  opacity: 0;
+  z-index: 0; /* Move behind animation when hidden */
+}      </style>
       
       <!-- Non-critical CSS loaded asynchronously -->
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" 
@@ -258,7 +301,14 @@
               </h1>
           </div>
           <div class="header__laptop">
-              <div id="laptop"></div>
+            <img src="img/loading.svg" 
+                 alt="Laptop illustration" 
+                 width="707" 
+                 height="641"
+                 class="laptop-placeholder"
+                 id="laptop-placeholder">
+            
+            <div id="laptop" class="laptop-animation" aria-hidden="true"></div>
           </div>
       </div>
       <a id="link-down" href="#main" class="icon-link icon-link--scroll-down">
@@ -349,7 +399,7 @@
             <div class="card__container">
               <div class="card project-tile">
                 <div class="card__image-box">
-                  <a href="https://darwishcodes.github.io/komm/"
+                  <a href="https://darwishcodes.githugb.io/komm/"
                     ><img loading="lazy"
                       class="card__image"
                       src="img/komm-one.png"
@@ -803,23 +853,49 @@
       // Load animation library separately
       loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', function() {
         // Initialize animation after library loads
-        initAnimation();
+        loadLaptopAnimation();
       });
     });
   });
   
-  // Initialize animation when animation library is loaded
-  function initAnimation() {
-    var animation = bodymovin.loadAnimation({
-      container: document.getElementById("laptop"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      path: "./js/Laptop.json",
-    });
+  function loadLaptopAnimation() {
+  // Check if Lottie library is already available
+  if (typeof bodymovin !== 'undefined') {
+    initLaptopAnimation();
+    return;
   }
   
-  // Initialize carousel when in viewport using Intersection Observer
+  // Dynamically load the Lottie library if not already loaded
+  var script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js';
+  script.onload = function() {
+    initLaptopAnimation();
+  };
+  document.body.appendChild(script);
+}
+
+function initLaptopAnimation() {
+  var animation = bodymovin.loadAnimation({
+    container: document.getElementById("laptop"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "./js/Laptop.json",
+  });
+  
+  // When animation is ready, show it and hide placeholder
+  animation.addEventListener('DOMLoaded', function() {
+    // Make the animation visible first
+    var laptopAnimation = document.getElementById('laptop');
+    laptopAnimation.classList.add('loaded');
+    
+    // Then hide the placeholder
+    var placeholder = document.getElementById('laptop-placeholder');
+    if (placeholder) {
+      placeholder.style.opacity = '0';
+    }
+  });
+}  // Initialize carousel when in viewport using Intersection Observer
   function initCarouselWhenVisible() {
     const carousels = document.querySelectorAll('.owl-carousel');
     if (!carousels.length) return;

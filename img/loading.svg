@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 707 641" width="707" height="641">
+  <!-- Background rectangle with transparent fill -->
+  <rect width="707" height="641" fill="#00000000" />
+  
+  <!-- Animated gradient for the skeleton effect (dark theme) -->
+  <defs>
+    <linearGradient id="skeleton-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2a2a2a">
+        <animate attributeName="offset" values="-2; 1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#3a3a3a">
+        <animate attributeName="offset" values="-1.5; 1.5" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#2a2a2a">
+        <animate attributeName="offset" values="-1; 2" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <!-- Skeleton loader elements -->
+  <rect x="153" y="120" width="400" height="320" rx="10" fill="url(#skeleton-gradient)" />
+  <!-- <rect x="253" y="460" width="200" height="50" rx="5" fill="url(#skeleton-gradient)" /> -->
+  
+  <!-- Optional: Small icon to indicate loading -->
+  <!-- <g transform="translate(353, 320)">
+    <circle cx="0" cy="0" r="30" fill="#333333" />
+    <path d="M-15,-5 L0,10 L15,-5" stroke="#555555" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  </g> -->
+</svg>
