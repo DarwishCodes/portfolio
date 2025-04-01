@@ -28,7 +28,7 @@
   background: linear-gradient(135deg, #112564 0%, #020230 100%);
 
   @include addMediaQuery(tablet) {
-    padding: 0rem 0 10rem 0;
+    padding: 1rem 0 10rem 0;
   }
 
   &__logo {

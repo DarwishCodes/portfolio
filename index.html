@@ -138,7 +138,6 @@
           justify-content: center;
           align-items: center;
           overflow: hidden;
-          margin-top: 7rem;
         }
         
         .header__content {
@@ -193,7 +192,7 @@
           width: 100%;
           margin: 0 auto;
         }
-        
+
         /* Placeholder image shows immediately */
         .laptop-placeholder {
           position: absolute;
@@ -205,7 +204,7 @@
           z-index: 1; /* Make sure placeholder is above animation initially */
           transition: opacity 0.3s ease;
         }
-        
+
         /* Animation container starts hidden and appears later */
         .laptop-animation {
           position: absolute;
@@ -217,19 +216,18 @@
           transition: opacity 0.5s ease;
           z-index: 2; /* Ensure animation is above placeholder when visible */
         }
-        
+
         /* When animation is loaded, make it visible */
         .laptop-animation.loaded {
           opacity: 1;
         }
-        
+
         /* This ensures the placeholder properly hides when animation loads */
         .laptop-animation.loaded ~ .laptop-placeholder {
           opacity: 0;
           width: 100%;
           z-index: 0; /* Move behind animation when hidden */
-        }
-      </style>
+        }      </style>
       
       <!-- Non-critical CSS loaded asynchronously -->
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" 

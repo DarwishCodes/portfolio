@@ -917,7 +917,7 @@ body {
   background: linear-gradient(135deg, #112564 0%, #020230 100%); }
   @media (max-width: 48em) {
     .section-about {
-      padding: 0rem 0 10rem 0; } }
+      padding: 1rem 0 10rem 0; } }
   .section-about__logo {
     width: 20rem;
     height: 20rem; }
