@@ -156,8 +156,6 @@
 .header__laptop {
   position: relative;
   width: 100%;
-  max-width: 707px;
-  height: 641px;
   margin: 0 auto;
 }
 
@@ -193,6 +191,7 @@
 /* This ensures the placeholder properly hides when animation loads */
 .laptop-animation.loaded ~ .laptop-placeholder {
   opacity: 0;
+  width: 100%;
   z-index: 0; /* Move behind animation when hidden */
 }      </style>
       
