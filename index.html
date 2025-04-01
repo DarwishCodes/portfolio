@@ -5,7 +5,42 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+      
+      <!-- SEO Meta Tags -->
+      <title>Muhammad Darwish | Full-stack Web Developer | React, Angular, PHP, Laravel</title>
+      <meta name="description" content="Hire Muhammad Darwish, a passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. Expert web solutions for businesses and startups." />
+      <meta name="keywords" content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer, JavaScript expert, web development services" />
+      <meta name="author" content="Muhammad Darwish" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <link rel="canonical" href="https://darwishcodes.work/" />
+      
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://darwishcodes.work/" />
+      <meta property="og:site_name" content="Muhammad Darwish | Web Developer" />
+      <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer" />
+      <meta property="og:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel. Available for hire on challenging web projects." />
+      <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:locale" content="en_US" />
+      
+      <!-- Twitter -->
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://darwishcodes.work/" />
+      <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer" />
+      <meta property="twitter:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel." />
+      <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
+      
+      <!-- Verification Tags -->
+      <!-- Add your Google Search Console verification code here -->
+      <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+      <!-- Add your Bing Webmaster Tools verification code here -->
+      <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
+      
+      <!-- Performance Optimization -->
       <!-- Preconnect to important domains -->
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +52,7 @@
       
       <!-- Critical CSS inline -->
       <style>
-        /* Critical CSS for above-the-fold content */
+        /* Your existing critical CSS */
         :root {
           --color-primary: #0e153a;
           --color-primary-light: #3d5af1;
@@ -151,49 +186,50 @@
           display: block;
           margin-bottom: 1.5rem;
         }
-/* Fix for animation visibility and placeholder styling */
-
-.header__laptop {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* Placeholder image shows immediately */
-.laptop-placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  z-index: 1; /* Make sure placeholder is above animation initially */
-  transition: opacity 0.3s ease;
-}
-
-/* Animation container starts hidden and appears later */
-.laptop-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 2; /* Ensure animation is above placeholder when visible */
-}
-
-/* When animation is loaded, make it visible */
-.laptop-animation.loaded {
-  opacity: 1;
-}
-
-/* This ensures the placeholder properly hides when animation loads */
-.laptop-animation.loaded ~ .laptop-placeholder {
-  opacity: 0;
-  width: 100%;
-  z-index: 0; /* Move behind animation when hidden */
-}      </style>
+    
+        /* Fix for animation visibility and placeholder styling */
+        .header__laptop {
+          position: relative;
+          width: 100%;
+          margin: 0 auto;
+        }
+        
+        /* Placeholder image shows immediately */
+        .laptop-placeholder {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          z-index: 1; /* Make sure placeholder is above animation initially */
+          transition: opacity 0.3s ease;
+        }
+        
+        /* Animation container starts hidden and appears later */
+        .laptop-animation {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: opacity 0.5s ease;
+          z-index: 2; /* Ensure animation is above placeholder when visible */
+        }
+        
+        /* When animation is loaded, make it visible */
+        .laptop-animation.loaded {
+          opacity: 1;
+        }
+        
+        /* This ensures the placeholder properly hides when animation loads */
+        .laptop-animation.loaded ~ .laptop-placeholder {
+          opacity: 0;
+          width: 100%;
+          z-index: 0; /* Move behind animation when hidden */
+        }
+      </style>
       
       <!-- Non-critical CSS loaded asynchronously -->
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" 
@@ -212,44 +248,51 @@
         <link href="css/all.min.css" rel="stylesheet">
       </noscript>
       
-      <!-- Structured data -->
+      <!-- Enhanced Structured Data -->
       <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "Person",
           "name": "Muhammad Darwish",
           "url": "https://darwishcodes.work",
+          "image": "https://darwishcodes.work/img/logo-darwish--2.png",
           "sameAs": [
-            "https://www.upwork.com/freelancers/muhammaddarwish"
+            "https://www.upwork.com/freelancers/muhammaddarwish",
+            "https://github.com/YOUR_GITHUB",
+            "https://linkedin.com/in/YOUR_LINKEDIN"
           ],
           "jobTitle": "Full-stack Web Developer",
           "worksFor": {
             "@type": "Organization",
             "name": "Freelance"
           },
-          "knowsAbout": ["React.js", "Vue.js", "Angular", "JavaScript", "PHP", "Laravel", "MySQL"]
+          "knowsAbout": ["React.js", "Vue.js", "Angular", "JavaScript", "PHP", "Laravel", "MySQL", "Web Development", "Front-end Development", "Back-end Development"]
         }
       </script>
       
-      <!-- Meta tags -->
-      <link rel="canonical" href="https://darwishcodes.work/">
-      <meta property="og:type" content="website">
-      <meta property="og:url" content="https://darwishcodes.work/">
-      <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer">
-      <meta property="og:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
-      <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
-      <meta property="twitter:card" content="summary_large_image">
-      <meta property="twitter:url" content="https://darwishcodes.work/">
-      <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer">
-      <meta property="twitter:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel.">
-      <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png">
-      <meta name="robots" content="index, follow">
-      <meta name="description" content="Muhammad Darwish - Passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. View my portfolio and hire me for your next web project.">
-      <meta name="keywords" content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer">
-      <meta name="author" content="Muhammad Darwish">
+      <!-- Website Schema -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "url": "https://darwishcodes.work/",
+          "name": "Muhammad Darwish | Full-stack Web Developer",
+          "description": "Professional portfolio of Muhammad Darwish, a full-stack web developer specializing in modern web technologies.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://darwishcodes.work/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      </script>
       
+      <!-- Favicon and Apple Touch Icons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
       <link rel="shortcut icon" type="image/png" href="img/hexagon.png" />
-      <title>Muhammad Darwish | Full-stack Web Developer | darwishcodes.work</title>  
+      <meta name="theme-color" content="#0e153a">
     </head>
     <!-- Body content goes here -->
   <body>
