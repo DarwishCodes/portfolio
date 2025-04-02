@@ -668,7 +668,8 @@ body {
   align-items: center;
   position: relative;
   padding-top: 5rem;
-  min-height: 100vh;
+  min-height: 68rem;
+  max-height: 100vh;
   padding: 0;
   background: linear-gradient(135deg, #112564 0%, #020230 100%); }
   @media (max-width: 48em) {
