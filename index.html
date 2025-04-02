@@ -1,253 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      <!-- SEO Meta Tags -->
-      <title>Muhammad Darwish | Full-stack Web Developer | React, Angular, PHP, Laravel</title>
-      <meta name="description" content="Hire Muhammad Darwish, a passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. Expert web solutions for businesses and startups." />
-      <meta name="keywords" content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer, JavaScript expert, web development services" />
-      <meta name="author" content="Muhammad Darwish" />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <link rel="canonical" href="https://darwishcodes.work/" />
-      
-      <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://darwishcodes.work/" />
-      <meta property="og:site_name" content="Muhammad Darwish | Web Developer" />
-      <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer" />
-      <meta property="og:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel. Available for hire on challenging web projects." />
-      <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:locale" content="en_US" />
-      
-      <!-- Twitter -->
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://darwishcodes.work/" />
-      <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer" />
-      <meta property="twitter:description" content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel." />
-      <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
-      
-      <!-- Verification Tags -->
-      <!-- Add your Google Search Console verification code here -->
-      <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
-      <!-- Add your Bing Webmaster Tools verification code here -->
-      <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
-      
-      <!-- Performance Optimization -->
-      <!-- Preconnect to important domains -->
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-      
-      <!-- Preload critical assets -->
-      <link rel="preload" href="img/logo-darwish--2.png" as="image" />
-      <link rel="preload" href="js/script.js" as="script" />
-      
-      <!-- Critical CSS inline -->
-      <style>
-        /* Your existing critical CSS */
-        :root {
-          --color-primary: #0e153a;
-          --color-primary-light: #3d5af1;
-          --color-primary-dark: #0e153a;
-          --color-secondary: #22d1ee;
-          --color-white: #fff;
-          --color-black: #000;
-          --color-grey: #777;
-          --color-grey-light-1: #f7f7f7;
-          --color-grey-light-2: #eee;
-          --color-grey-dark: #999;
-          --color-grey-dark-2: #333;
-          --color-grey-dark-3: #444;
-        }
-        
-        *,
-        *::after,
-        *::before {
-          margin: 0;
-          padding: 0;
-          box-sizing: inherit;
-        }
-        
-        html {
-          font-size: 62.5%;
-          scroll-behavior: smooth;
-        }
-        
-        body {
-          box-sizing: border-box;
-          font-family: "Montserrat", sans-serif;
-          font-weight: 400;
-          line-height: 1.7;
-          color: var(--color-grey-dark);
-          padding: 0rem;
-          overflow-x: hidden;
-        }
-        
-        .navigation {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          z-index: 110;
-          background-color: var(--color-white);
-          box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
-        }
-        
-        .navigation__wrap {
-          max-width: 120rem;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 1rem 2rem;
-        }
-        
-        .navigation__logo {
-          height: 5rem;
-          width: auto;
-        }
-        
-        .navigation__list {
-          list-style: none;
-          display: flex;
-        }
-        
-        .navigation__item {
-          margin-left: 3rem;
-        }
-        
-        .navigation__link {
-          text-decoration: none;
-          color: var(--color-grey-dark);
-          font-size: 1.6rem;
-          transition: all 0.2s;
-        }
-        
-        .header {
-          height: 100vh;
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: hidden;
-        }
-        
-        .header__content {
-          width: 100%;
-          max-width: 120rem;
-          margin: 0 auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 0 2rem;
-        }
-        
-        .header__text-box {
-          flex: 0 0 50%;
-        }
-        
-        .header__laptop {
-          flex: 0 0 40%;
-          min-height: 30rem;
-        }
-        
-        .heading-primary {
-          font-size: 4rem;
-          font-weight: 500;
-          line-height: 1.2;
-          color: var(--color-primary);
-          margin-bottom: 2rem;
-        }
-        
-        .heading-primary--main {
-          display: block;
-          font-size: 5.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-        }
-        
-        .heading-primary--sub {
-          display: block;
-          font-size: 2rem;
-          font-weight: 400;
-          line-height: 1.6;
-        }
-        
-        .heading--light {
-          display: block;
-          margin-bottom: 1.5rem;
-        }
-    
-        /* Fix for animation visibility and placeholder styling */
-        .header__laptop {
-          position: relative;
-          width: 100%;
-          margin: 0 auto;
-        }
 
-        /* Placeholder image shows immediately */
-        .laptop-placeholder {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-          z-index: 1; /* Make sure placeholder is above animation initially */
-          transition: opacity 0.3s ease;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        /* Animation container starts hidden and appears later */
-        .laptop-animation {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-          transition: opacity 0.5s ease;
-          z-index: 2; /* Ensure animation is above placeholder when visible */
-        }
+  <!-- SEO Meta Tags -->
+  <title>Muhammad Darwish | Full-stack Web Developer | React, Angular, PHP, Laravel</title>
+  <meta name="description"
+    content="Hire Muhammad Darwish, a passionate full-stack web developer specializing in React, Angular, PHP, and Laravel. Expert web solutions for businesses and startups." />
+  <meta name="keywords"
+    content="web developer, full-stack developer, React developer, Angular developer, PHP developer, Laravel developer, front-end developer, JavaScript expert, web development services" />
+  <meta name="author" content="Muhammad Darwish" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://darwishcodes.work/" />
 
-        /* When animation is loaded, make it visible */
-        .laptop-animation.loaded {
-          opacity: 1;
-        }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://darwishcodes.work/" />
+  <meta property="og:site_name" content="Muhammad Darwish | Web Developer" />
+  <meta property="og:title" content="Muhammad Darwish | Full-stack Web Developer" />
+  <meta property="og:description"
+    content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel. Available for hire on challenging web projects." />
+  <meta property="og:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
 
-        /* This ensures the placeholder properly hides when animation loads */
-        .laptop-animation.loaded ~ .laptop-placeholder {
-          opacity: 0;
-          width: 100%;
-          z-index: 0; /* Move behind animation when hidden */
-        }      </style>
-            <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://darwishcodes.work/" />
+  <meta property="twitter:title" content="Muhammad Darwish | Full-stack Web Developer" />
+  <meta property="twitter:description"
+    content="Passionate full-stack developer with expertise in React, Angular, PHP, and Laravel." />
+  <meta property="twitter:image" content="https://darwishcodes.work/img/logo-darwish--2.png" />
 
-      <!-- Non-critical CSS loaded asynchronously -->
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" 
-            rel="stylesheet" media="print" onload="this.media='all'" />
-      <link rel="stylesheet" href="css/owl.carousel.min.css" media="print" onload="this.media='all'" />
-      <link rel="stylesheet" href="css/owl.theme.default.min.css" media="print" onload="this.media='all'" />
-      <link href="css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-      
-      <!-- Fallback for browsers that don't support JS -->
-      <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link href="css/all.min.css" rel="stylesheet">
-      </noscript>
-      
-      <!-- Enhanced Structured Data -->
-      <script type="application/ld+json">
+  <!-- Verification Tags -->
+  <!-- Add your Bing Webmaster Tools verification code here -->
+  <!-- <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" /> -->
+
+  <!-- Performance Optimization -->
+  <!-- Preconnect to important domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="img/logo-darwish--2.png" as="image" />
+  <link rel="preload" href="js/script.js" as="script" />
+  <link rel="preload" href="css/style.css" media="print" onload="this.media='all'" />
+
+  <!-- Critical CSS inline -->
+  <style>
+    /* Your existing critical CSS */
+    :root {
+      --color-primary: #0e153a;
+      --color-primary-light: #3d5af1;
+      --color-primary-dark: #0e153a;
+      --color-secondary: #22d1ee;
+      --color-white: #fff;
+      --color-black: #000;
+      --color-grey: #777;
+      --color-grey-light-1: #f7f7f7;
+      --color-grey-light-2: #eee;
+      --color-grey-dark: #999;
+      --color-grey-dark-2: #333;
+      --color-grey-dark-3: #444;
+    }
+
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      box-sizing: border-box;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--color-grey-dark);
+      padding: 0rem;
+      overflow-x: hidden;
+    }
+
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 110;
+      background-color: var(--color-white);
+      box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation__wrap {
+      max-width: 120rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .navigation__logo {
+      height: 5rem;
+      width: auto;
+    }
+
+    .navigation__list {
+      list-style: none;
+      display: flex;
+    }
+
+    .navigation__item {
+      margin-left: 3rem;
+    }
+
+    .navigation__link {
+      text-decoration: none;
+      color: var(--color-grey-dark);
+      font-size: 1.6rem;
+      transition: all 0.2s;
+    }
+
+    .header {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .header__content {
+      width: 100%;
+      max-width: 120rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .header__text-box {
+      flex: 0 0 50%;
+    }
+
+    .header__laptop {
+      flex: 0 0 40%;
+      min-height: 30rem;
+    }
+
+    .heading-primary {
+      font-size: 4rem;
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--color-primary);
+      margin-bottom: 2rem;
+    }
+
+    .heading-primary--main {
+      display: block;
+      font-size: 5.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .heading-primary--sub {
+      display: block;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .heading--light {
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Fix for animation visibility and placeholder styling */
+    .header__laptop {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Placeholder image shows immediately */
+    .laptop-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 1;
+      /* Make sure placeholder is above animation initially */
+      transition: opacity 0.3s ease;
+    }
+
+    /* Animation container starts hidden and appears later */
+    .laptop-animation {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 2;
+      /* Ensure animation is above placeholder when visible */
+    }
+
+    /* When animation is loaded, make it visible */
+    .laptop-animation.loaded {
+      opacity: 1;
+    }
+
+    /* This ensures the placeholder properly hides when animation loads */
+    .laptop-animation.loaded~.laptop-placeholder {
+      opacity: 0;
+      width: 100%;
+      z-index: 0;
+      /* Move behind animation when hidden */
+    }
+  </style>
+
+  <!-- Non-critical CSS loaded asynchronously -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" media="print" onload="this.media='all'" />
+  <link href="css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
+
+  <!-- Fallback for browsers that don't support JS -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link href="css/all.min.css" rel="stylesheet">
+  </noscript>
+
+  <!-- Enhanced Structured Data -->
+  <script type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "Person",
@@ -267,9 +273,9 @@
           "knowsAbout": ["React.js", "Vue.js", "Angular", "JavaScript", "PHP", "Laravel", "MySQL", "Web Development", "Front-end Development", "Back-end Development"]
         }
       </script>
-      
-      <!-- Website Schema -->
-      <script type="application/ld+json">
+
+  <!-- Website Schema -->
+  <script type="application/ld+json">
         {
           "@context": "https://schema.org",
           "@type": "WebSite",
@@ -283,572 +289,451 @@
           }
         }
       </script>
-      
-      <!-- Favicon and Apple Touch Icons -->
-      <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
-      <link rel="manifest" href="/site.webmanifest">
-      <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-      <meta name="theme-color" content="#0e153a">
-    </head>
-    <!-- Body content goes here -->
-  <body>
-    <nav>
-      <div class="navigation" id="navbar">
-        <div class="navigation__wrap">
-          <div class="navigation__logo-box">
-            <a href="#">
-              <img loading="lazy"
-                src="img/logo-darwish--2.png"
-                alt="Muhammad Darwish Full-stack Developer Portfolio Logo"
-                class="navigation__logo"
-              />
-            </a>
-          </div>
-          <div class="navigation__nav">
-            <ul class="navigation__list">
-              <!-- navigation__item--select -->
-              <li class="navigation__item">
-                <a href="#main" class="navigation__link">About</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#projects" class="navigation__link">My Projects</a>
-              </li>
-              <li class="navigation__item">
-                <a href="#contact" class="navigation__link">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <header class="header">
-      <div class="background-shapes">
-          <div class="shape"></div>
-          <div class="shape"></div>
-      </div>
-      <div class="header__content">
-          <div class="header__text-box">
-              <h1 class="heading-primary">
-                  <span class="heading-primary--main">Hello!</span>
-                  <span class="heading-primary--sub">
-                      <span class="heading--light">I'm Muhammad Darwish, a passionate Full-stack web developer.</span>
-                      I love 2 things:<br>
-                      ☕ Morning coffee<br>
-                      👍 and a satisfied client :)
-                  </span>
-              </h1>
-          </div>
-          <div class="header__laptop">
-            <img src="img/loading.svg" 
-                 alt="Laptop illustration" 
-                 width="707" 
-                 height="641"
-                 class="laptop-placeholder"
-                 id="laptop-placeholder">
-            
-            <div id="laptop" class="laptop-animation" aria-hidden="true"></div>
-          </div>
-      </div>
-      <a id="link-down" href="#main" class="icon-link icon-link--scroll-down">
-        <i class="fa-regular fa-arrow-down icon-link__arrow"></i>
-      </a>
-  </header>
-    <main id="main" class="main">
-      <div id="about" class="section-about">
-        <div class="row">
-          <div class="u-center-text u-margin-bottom-large u-margin-top-large">
-            <h2 class="heading-secondry">What I Do</h2>
-          </div>
-          <div class="col-1-of-2">
-            <p class="paragraph u-margin-bottom-small">
-              My passion for technology motivates me to continuously explore and learn about the latest advancements in web development. 
-              I am confident that my skills and expertise in web development tools can make a valuable contribution to any organization. 
-              If you’re seeking a web developer to create a website for you, I’d be delighted to assist and bring your vision to life.
-          </div>
-          <div class="col-1-of-2">
-            <div class="section-about__logo-box">
-              <span class="logo-animation"></span>
-              <svg
-                class="section-about__logo--2"
-                xmlns="http://www.w3.org/2000/svg"
-                class="ionicon"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
 
-        <div class="row">
-          <div class="col-1-of-2">
-            <p class="paragraph">Technical Expertise:</p>
-            <p class="paragraph">
-              Front-end: React.js, Vue.js, Angular, TypeScript, JavaScript, Material UI, Tailwind CSS, HTML, CSS/SCSS,
-              Bootstrap, jQuery, Alpine.js <br>
-              Back-end: PHP, Laravel, MySQL <br>
-              Tools: Git, Jira, Figma <br>
-              Methodologies: Agile/Scrum <br>
-            </p>
-          </div>
-          <div class="col-1-of-2">
-            <div class="section-about__logo-box">
-              <svg
-                class="section-about__logo"
-                xmlns="http://www.w3.org/2000/svg"
-                class="ionicon"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  class="stack stack--1"
-                  style="fill: #20caff"
-                  d="M39.93 149.25l197.4 95.32c5.14 2.45 12 3.73 18.79 3.73s13.65-1.28 18.78-3.73l197.4-95.32c10.38-5 10.38-13.18 0-18.2L274.9 35.73c-5.13-2.45-12-3.73-18.78-3.73s-13.65 1.28-18.79 3.73l-197.4 95.32c-10.38 5.02-10.38 13.18 0 18.2z"
-                />
-                <path
-                  class="stack stack--2"
-                  style="fill: #205d75"
-                  d="M472.3 246.9s-36.05-17.38-40.83-19.72-6.07-2.21-11.09.12-145.6 70.23-145.6 70.23a45.71 45.71 0 01-18.78 3.74c-6.77 0-13.65-1.29-18.78-3.74 0 0-136.85-66-143.27-69.18C87 225 85 225 78.67 228l-39 18.78c-10.38 5-10.38 13.19 0 18.2L237.1 360.3c5.13 2.45 12 3.73 18.78 3.73s13.65-1.28 18.79-3.73l197.4-95.3c10.61-4.92 10.61-13.08.23-18.1z"
-                />
-                <path
-                  class="stack stack--3"
-                  style="fill: #ff7675"
-                  d="M472.3 362.75s-36.05-17.38-40.83-19.75-6.07-2.21-11.09.12S274.9 413.5 274.9 413.5a45.74 45.74 0 01-18.78 3.73c-6.77 0-13.65-1.28-18.79-3.73 0 0-136.85-66-143.26-69.18-7-3.39-9-3.39-15.29-.35l-39 18.78c-10.39 5-10.39 13.18 0 18.2l197.4 95.32c5.13 2.56 12 3.73 18.78 3.73s13.65-1.28 18.78-3.73L472.18 381c10.5-5.07 10.5-13.23.12-18.25z"
-                />
-              </svg>
-            </div>
+  <!-- Favicon and Apple Touch Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <meta name="theme-color" content="#0e153a">
+</head>
+<!-- Body content goes here -->
+
+<body>
+  <nav>
+    <div class="navigation" id="navbar">
+      <div class="navigation__wrap">
+        <div class="navigation__logo-box">
+          <a href="#">
+            <img loading="lazy" src="img/logo-darwish--2.png" alt="Muhammad Darwish Full-stack Developer Portfolio Logo"
+              class="navigation__logo" />
+          </a>
+        </div>
+        <div class="navigation__nav">
+          <ul class="navigation__list">
+            <!-- navigation__item--select -->
+            <li class="navigation__item">
+              <a href="#main" class="navigation__link">About</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#projects" class="navigation__link">My Projects</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#contact" class="navigation__link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <header class="header">
+    <div class="background-shapes">
+      <div class="shape"></div>
+      <div class="shape"></div>
+    </div>
+    <div class="header__content">
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Hello!</span>
+          <span class="heading-primary--sub">
+            <span class="heading--light">I'm Muhammad Darwish, a passionate Full-stack web developer.</span>
+            I love 2 things:<br>
+            ☕ Morning coffee<br>
+            👍 and a satisfied client :)
+          </span>
+        </h1>
+      </div>
+      <div class="header__laptop">
+        <img src="img/loading.svg" alt="Laptop illustration" width="707" height="641" class="laptop-placeholder"
+          id="laptop-placeholder">
+
+        <div id="laptop" class="laptop-animation" aria-hidden="true"></div>
+      </div>
+    </div>
+    <a id="link-down" href="#main" class="icon-link icon-link--scroll-down">
+      <i class="fa-regular fa-arrow-down icon-link__arrow"></i>
+    </a>
+  </header>
+  <main id="main" class="main">
+    <div id="about" class="section-about">
+      <div class="row">
+        <div class="u-center-text u-margin-bottom-large u-margin-top-large">
+          <h2 class="heading-secondry">What I Do</h2>
+        </div>
+        <div class="col-1-of-2">
+          <p class="paragraph u-margin-bottom-small">
+            My passion for technology motivates me to continuously explore and learn about the latest advancements in
+            web development.
+            I am confident that my skills and expertise in web development tools can make a valuable contribution to any
+            organization.
+            If you’re seeking a web developer to create a website for you, I’d be delighted to assist and bring your
+            vision to life.
+        </div>
+        <div class="col-1-of-2">
+          <div class="section-about__logo-box">
+            <span class="logo-animation"></span>
+            <svg class="section-about__logo--2" xmlns="http://www.w3.org/2000/svg" class="ionicon"
+              viewBox="0 0 512 512">
+              <path
+                d="M64 32l35 403.22L255.77 480 413 435.15 448 32zm290.68 334.9L256.07 395l-98.46-28.24-6.75-77.76h48.26l3.43 39.56 53.59 15.16.13.28 53.47-14.85 5.64-64.15H203l-4-50h120.65l4.35-51H140l-4-49h240.58z" />
+            </svg>
           </div>
         </div>
       </div>
-      <div class="section-project" id="projects">
-        <div class="projects">
-          <!-- <div class="projects__background">
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <p class="paragraph">Technical Expertise:</p>
+          <p class="paragraph">
+            Front-end: React.js, Vue.js, Angular, TypeScript, JavaScript, Material UI, Tailwind CSS, HTML, CSS/SCSS,
+            Bootstrap, jQuery, Alpine.js <br>
+            Back-end: PHP, Laravel, MySQL <br>
+            Tools: Git, Jira, Figma <br>
+            Methodologies: Agile/Scrum <br>
+          </p>
+        </div>
+        <div class="col-1-of-2">
+          <div class="section-about__logo-box">
+            <svg class="section-about__logo" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+              <path class="stack stack--1" style="fill: #20caff"
+                d="M39.93 149.25l197.4 95.32c5.14 2.45 12 3.73 18.79 3.73s13.65-1.28 18.78-3.73l197.4-95.32c10.38-5 10.38-13.18 0-18.2L274.9 35.73c-5.13-2.45-12-3.73-18.78-3.73s-13.65 1.28-18.79 3.73l-197.4 95.32c-10.38 5.02-10.38 13.18 0 18.2z" />
+              <path class="stack stack--2" style="fill: #205d75"
+                d="M472.3 246.9s-36.05-17.38-40.83-19.72-6.07-2.21-11.09.12-145.6 70.23-145.6 70.23a45.71 45.71 0 01-18.78 3.74c-6.77 0-13.65-1.29-18.78-3.74 0 0-136.85-66-143.27-69.18C87 225 85 225 78.67 228l-39 18.78c-10.38 5-10.38 13.19 0 18.2L237.1 360.3c5.13 2.45 12 3.73 18.78 3.73s13.65-1.28 18.79-3.73l197.4-95.3c10.61-4.92 10.61-13.08.23-18.1z" />
+              <path class="stack stack--3" style="fill: #ff7675"
+                d="M472.3 362.75s-36.05-17.38-40.83-19.75-6.07-2.21-11.09.12S274.9 413.5 274.9 413.5a45.74 45.74 0 01-18.78 3.73c-6.77 0-13.65-1.28-18.79-3.73 0 0-136.85-66-143.26-69.18-7-3.39-9-3.39-15.29-.35l-39 18.78c-10.39 5-10.39 13.18 0 18.2l197.4 95.32c5.13 2.56 12 3.73 18.78 3.73s13.65-1.28 18.78-3.73L472.18 381c10.5-5.07 10.5-13.23.12-18.25z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-project" id="projects">
+      <div class="projects">
+        <!-- <div class="projects__background">
             <img loading="lazy"
               class="projects__background-image"
               src="img/logo-3-slash.png"
               alt="Logo Hexagon"
             />
           </div> -->
-          <div class="row">
-            <div class="u-center-text u-margin-bottom-large">
-              <h2 class="heading-secondry">Some Projects</h2>
+        <div class="row">
+          <div class="u-center-text u-margin-bottom-large">
+            <h2 class="heading-secondry">Some Projects</h2>
+          </div>
+          <div class="card__container">
+            <div class="card project-tile">
+              <div class="card__image-box">
+                <a href="https://darwishcodes.githugb.io/komm/"><img loading="lazy" class="card__image"
+                    src="img/komm-one.png" alt="Komm.one" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/komm/"
+                    class="card__link">Komm.ONE</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/komm/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
+                </div>
+              </div>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--js">JavaScript</span>
+              </div>
             </div>
-            <div class="card__container">
-              <div class="card project-tile">
-                <div class="card__image-box">
-                  <a href="https://darwishcodes.githugb.io/komm/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/komm-one.png"
-                      alt="Komm.one"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/komm/"
-                      class="card__link"
-                      >Komm.ONE</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/komm/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--js">JavaScript</span>
-                </div>
-              </div>
 
-              <div class="card project-tile">
-                <div class="card__image-box">
-                  <a href="https://unisync.app/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/unisync.png"
-                      alt="Unisync.app"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a href="https://unisync.app/" class="card__link"
-                      >Unisync</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://unisync.app/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--angular">Angular</span>
-                  <span class="card__code card__code--js">TypeScript</span>
+            <div class="card project-tile">
+              <div class="card__image-box">
+                <a href="https://unisync.app/"><img loading="lazy" class="card__image" src="img/unisync.png"
+                    alt="Unisync.app" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://unisync.app/" class="card__link">Unisync</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://unisync.app/'" class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--angular">Angular</span>
+                <span class="card__code card__code--js">TypeScript</span>
+              </div>
+            </div>
 
-              <div class="card project-tile">
-                <div class="card__image-box">
-                  <a href="http://awaadegypt.com/en"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/awwad.png"
-                      alt="awwaadegypt.com"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a href="http://awaadegypt.com/en" class="card__link"
-                      >AwaadEgypt</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='http://awaadegypt.com/en'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--angular">Laravel</span>
-                  <span class="card__code card__code--php">PHP</span>
+            <div class="card project-tile">
+              <div class="card__image-box">
+                <a href="http://awaadegypt.com/en"><img loading="lazy" class="card__image" src="img/awwad.png"
+                    alt="awwaadegypt.com" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="http://awaadegypt.com/en" class="card__link">AwaadEgypt</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='http://awaadegypt.com/en'" class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
-              <div class="card card--h-41 project-tile">
-                <div class="card__image-box card__image-box--h-18">
-                  <a href="https://darwishcodes.github.io/mirqah/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/mirqah.png"
-                      alt="Mirqah"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/mirqah/"
-                      class="card__link"
-                      >Mirqah</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/mirqah/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--angular">Laravel</span>
+                <span class="card__code card__code--php">PHP</span>
+              </div>
+            </div>
+            <div class="card card--h-41 project-tile">
+              <div class="card__image-box card__image-box--h-18">
+                <a href="https://darwishcodes.github.io/mirqah/"><img loading="lazy" class="card__image"
+                    src="img/mirqah.png" alt="Mirqah" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/mirqah/"
+                    class="card__link">Mirqah</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/mirqah/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
-              <div class="card card--h-41 project-tile">
-                <div class="card__image-box card__image-box--h-18">
-                  <a href="https://darwishcodes.github.io/juventus-react/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/juventus.png"
-                      alt="Jueventus fun project"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/juventus-react/"
-                      class="card__link"
-                      >Juventus</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/juventus-react/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--js">JavaScript</span>
-                  <span class="card__code card__code--react">React</span>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+              </div>
+            </div>
+            <div class="card card--h-41 project-tile">
+              <div class="card__image-box card__image-box--h-18">
+                <a href="https://darwishcodes.github.io/juventus-react/"><img loading="lazy" class="card__image"
+                    src="img/juventus.png" alt="Jueventus fun project" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/juventus-react/"
+                    class="card__link">Juventus</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/juventus-react/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
-              <div class="card card--h-41 project-tile">
-                <div class="card__image-box card__image-box--h-18">
-                  <a href="https://darwishcodes.github.io/tripra/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/tripra.png"
-                      alt="Tripra - Sign-in Page"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/tripra/"
-                      class="card__link"
-                      >Tripra</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/tripra/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--js">JavaScript</span>
+                <span class="card__code card__code--react">React</span>
+              </div>
+            </div>
+            <div class="card card--h-41 project-tile">
+              <div class="card__image-box card__image-box--h-18">
+                <a href="https://darwishcodes.github.io/tripra/"><img loading="lazy" class="card__image"
+                    src="img/tripra.png" alt="Tripra - Sign-in Page" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/tripra/"
+                    class="card__link">Tripra</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/tripra/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
-              <div class="card project-tile">
-                <div class="card__image-box">
-                  <a href="https://darwishcodes.github.io/cdoc/"
-                    ><img loading="lazy"
-                      class="card__image"
-                      src="img/cdoc.png"
-                      alt="Cdoc"
-                  /></a>
-                </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/cdoc/"
-                      class="card__link"
-                      >CDOC</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/cdoc/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--js">JavaScript</span>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+              </div>
+            </div>
+            <div class="card project-tile">
+              <div class="card__image-box">
+                <a href="https://darwishcodes.github.io/cdoc/"><img loading="lazy" class="card__image"
+                    src="img/cdoc.png" alt="Cdoc" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/cdoc/"
+                    class="card__link">CDOC</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/cdoc/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
               </div>
-              <div class="card card--h-41 project-tile">
-                <div class="card__image-box card__image-box--h-18">
-                  <a href="https://darwishcodes.github.io/bb/"
-                    ><img loading="lazy" class="card__image" src="img/bb.png" alt="Beautiful Beginnings"
-                  /></a>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--js">JavaScript</span>
+              </div>
+            </div>
+            <div class="card card--h-41 project-tile">
+              <div class="card__image-box card__image-box--h-18">
+                <a href="https://darwishcodes.github.io/bb/"><img loading="lazy" class="card__image" src="img/bb.png"
+                    alt="Beautiful Beginnings" /></a>
+              </div>
+              <div class="card__text-block">
+                <span class="card__title"><a href="https://darwishcodes.github.io/bb/" class="card__link">Beautiful
+                    Beginnings</a></span>
+                <div class="u-center-text">
+                  <button onclick="location.href='https://darwishcodes.github.io/bb/'"
+                    class="btn form__btn btn--color-green">
+                    Visit Website
+                    <span class="btn__ripple-layer"></span>
+                    <span class="btn__ripple"></span>
+                  </button>
                 </div>
-                <div class="card__text-block">
-                  <span class="card__title"
-                    ><a
-                      href="https://darwishcodes.github.io/bb/"
-                      class="card__link"
-                      >Beautiful Beginnings</a
-                    ></span
-                  >
-                  <div class="u-center-text">
-                    <button
-                      onclick="location.href='https://darwishcodes.github.io/bb/'"
-                      class="btn form__btn btn--color-green"
-                    >
-                      Visit Website
-                      <span class="btn__ripple-layer"></span>
-                      <span class="btn__ripple"></span>
-                    </button>
-                  </div>
-                </div>
-                <div class="card__languages">
-                  <span class="card__code card__code--css">CSS</span>
-                  <span class="card__code card__code--js">JavaScript</span>
-                  <span class="card__code card__code--jquery">jQuery</span>
-                </div>
+              </div>
+              <div class="card__languages">
+                <span class="card__code card__code--css">CSS</span>
+                <span class="card__code card__code--js">JavaScript</span>
+                <span class="card__code card__code--jquery">jQuery</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section class="section-testimonial">
-        <div class="row">
-          <div class="u-center-text u-margin-bottom-large">
-            <h2 class="heading-secondry">Testimonials</h2>
-          </div>
-          <div class="testimonial-card__box">
-            <div class="testimonial-card">
-              <div class="testimonial-card__text-block">
-                <div class="testimonial-card__arrow-box">
-                  <div class="testimonial-card__arrow prev">
-                    <i class="fa-regular fa-arrow-left"></i>
-                  </div>
-                  <div class="testimonial-card__arrow next">
-                    <i class="fa-regular fa-arrow-right"></i>
-                  </div>
+    </div>
+    <section class="section-testimonial">
+      <div class="row">
+        <div class="u-center-text u-margin-bottom-large">
+          <h2 class="heading-secondry">Testimonials</h2>
+        </div>
+        <div class="testimonial-card__box">
+          <div class="testimonial-card">
+            <div class="testimonial-card__text-block">
+              <div class="testimonial-card__arrow-box">
+                <div class="testimonial-card__arrow prev">
+                  <i class="fa-regular fa-arrow-left"></i>
                 </div>
-                <div class="owl-carousel">
-                  <p class="testimonial-card__text">
-                    "Highly skilled on front-end development and design with
-                    great communication skills, I recommed working with Muhammad
-                    if you want something neat."
-                  </p>
-                  <p class="testimonial-card__text">
-                    "Excellent work! Muhammad is quick, has attention to detail
-                    and is a pleasure to work with! Will definetally hire again"
-                  </p>
-                  <p class="testimonial-card__text">
-                    "Great, fast work! Thanks a lot!"
-                  </p>
-                  <p class="testimonial-card__text">
-                    "Great freelancer! Very easy to work with and completed the
-                    task quickly! We recommend everyone to hire this developer!"
-                  </p>
-                  <p class="testimonial-card__text">
-                    "Did exactly what I wanted, when asked for and made some
-                    changes after, to fix up some unintended problems."
-                  </p>
-                  <p class="testimonial-card__text">
-                    "Muhammad is a great talented person, he managed to finish
-                    my last minute project quickly, he founds solutions for each
-                    problem, he responded to my messages quickly. I was happy
-                    working with him and for sure I will work with him once
-                    again."
-                  </p>
+                <div class="testimonial-card__arrow next">
+                  <i class="fa-regular fa-arrow-right"></i>
                 </div>
               </div>
-              <!-- <img loading="lazy"
+              <div class="owl-carousel">
+                <p class="testimonial-card__text">
+                  "Highly skilled on front-end development and design with
+                  great communication skills, I recommed working with Muhammad
+                  if you want something neat."
+                </p>
+                <p class="testimonial-card__text">
+                  "Excellent work! Muhammad is quick, has attention to detail
+                  and is a pleasure to work with! Will definetally hire again"
+                </p>
+                <p class="testimonial-card__text">
+                  "Great, fast work! Thanks a lot!"
+                </p>
+                <p class="testimonial-card__text">
+                  "Great freelancer! Very easy to work with and completed the
+                  task quickly! We recommend everyone to hire this developer!"
+                </p>
+                <p class="testimonial-card__text">
+                  "Did exactly what I wanted, when asked for and made some
+                  changes after, to fix up some unintended problems."
+                </p>
+                <p class="testimonial-card__text">
+                  "Muhammad is a great talented person, he managed to finish
+                  my last minute project quickly, he founds solutions for each
+                  problem, he responded to my messages quickly. I was happy
+                  working with him and for sure I will work with him once
+                  again."
+                </p>
+              </div>
+            </div>
+            <!-- <img loading="lazy"
                 class="testimonial-card__image"
                 src="img/medal-svgrepo-com.svg"
                 alt="5 Stars"
               /> -->
-            </div>
           </div>
         </div>
-      </section>
-      <footer id="contact" class="footer">
-        <div class="row row--full">
-          <div class="u-center-text u-margin-bottom-large">
-            <h2 class="heading-secondry">Contact Me</h2>
+      </div>
+    </section>
+    <footer id="contact" class="footer">
+      <div class="row row--full">
+        <div class="u-center-text u-margin-bottom-large">
+          <h2 class="heading-secondry">Contact Me</h2>
+        </div>
+        <div class="col-1-of-2 u-center-text">
+          <div class="u-margin-bottom-medium">
+            <h3 class="heading-tertiary">Email</h3>
           </div>
-          <div class="col-1-of-2 u-center-text">
-            <div class="u-margin-bottom-medium">
-              <h3 class="heading-tertiary">Email</h3>
-            </div>
-            <p class="paragraph">
-              Send me a message to talk about your project.
-            </p>
-            <a href="mailto:darwish.muhammad068@gmail.com" class="text-link"
-              >darwish.muhammad068@gmail.com</a
-            >
-            <div class="u-margin-top-medium">
-              <button
-                onclick="location.href='mailto:darwish.muhammad068@gmail.com'"
-                class="btn form__btn"
-              >
-                Send Me
-                <span class="btn__ripple-layer"></span>
-                <span class="btn__ripple"></span>
-              </button>
-            </div>
-          </div>
-          <div class="col-1-of-2 u-center-text">
-            <div class="u-margin-bottom-medium">
-              <h3 class="heading-tertiary">Upwork</h3>
-            </div>
-            <p class="paragraph">Feel free to check my Upwork portfolio too.</p>
-            <a
-              href="https://www.upwork.com/freelancers/muhammaddarwish"
-              class="text-link"
-              >https://www.upwork.com/freelancers/muhammaddarwish</a
-            >
-
-            <div class="u-margin-top-medium">
-              <button
-                onclick="location.href='https://www.upwork.com/freelancers/muhammaddarwish'"
-                class="btn form__btn btn--color-green"
-              >
-                Upwork
-                <span class="btn__ripple-layer"></span>
-                <span class="btn__ripple"></span>
-              </button>
-            </div>
+          <p class="paragraph">
+            Send me a message to talk about your project.
+          </p>
+          <a href="mailto:darwish.muhammad068@gmail.com" class="text-link">darwish.muhammad068@gmail.com</a>
+          <div class="u-margin-top-medium">
+            <button onclick="location.href='mailto:darwish.muhammad068@gmail.com'" class="btn form__btn">
+              Send Me
+              <span class="btn__ripple-layer"></span>
+              <span class="btn__ripple"></span>
+            </button>
           </div>
         </div>
+        <div class="col-1-of-2 u-center-text">
+          <div class="u-margin-bottom-medium">
+            <h3 class="heading-tertiary">Upwork</h3>
+          </div>
+          <p class="paragraph">Feel free to check my Upwork portfolio too.</p>
+          <a href="https://www.upwork.com/freelancers/muhammaddarwish"
+            class="text-link">https://www.upwork.com/freelancers/muhammaddarwish</a>
 
-        <a href="#" class="icon-link icon-link--relative"
-          >        <i class="fa-regular fa-arrow-up icon-link__arrow"></i>
-        </a>
-      </footer>
-    </main>
-  </body>
-  <!-- <script src="js/script.js"></script> -->
-  <script src="js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
-  <script
-    src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-    crossorigin="anonymous"
-  ></script>
-  <script src="js/owl.carousel.min.js"></script>
+          <div class="u-margin-top-medium">
+            <button onclick="location.href='https://www.upwork.com/freelancers/muhammaddarwish'"
+              class="btn form__btn btn--color-green">
+              Upwork
+              <span class="btn__ripple-layer"></span>
+              <span class="btn__ripple"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="icon-link icon-link--relative"> <i class="fa-regular fa-arrow-up icon-link__arrow"></i>
+      </a>
+    </footer>
+  </main>
+</body>
+<!-- <script src="js/script.js"></script> -->
+<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script>
   // Script loader utility
   function loadScript(src, callback = null, async = true, defer = true) {
     const script = document.createElement('script');
     script.src = src;
-    
+
     if (async) script.async = true;
     if (defer) script.defer = true;
-    
+
     if (callback) {
       script.onload = callback;
     }
-    
+
     document.body.appendChild(script);
   }
-  
+
   // Load critical scripts immediately
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Add passive event listeners for better scrolling performance
-    document.addEventListener('scroll', function() {}, { passive: true });
-    document.addEventListener('touchstart', function() {}, { passive: true });
-    document.addEventListener('touchmove', function() {}, { passive: true });
-    
+    document.addEventListener('scroll', function () { }, { passive: true });
+    document.addEventListener('touchstart', function () { }, { passive: true });
+    document.addEventListener('touchmove', function () { }, { passive: true });
+
     // Initialize any critical functionality
     const linkDown = document.getElementById('link-down');
     if (linkDown) {
-      linkDown.addEventListener('click', function(e) {
+      linkDown.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
@@ -861,78 +746,79 @@
       }, { passive: false });
     }
   });
-  
+
   // Lazy load non-critical scripts
-  window.addEventListener('load', function() {
+  window.addEventListener('load', function () {
     // Load jQuery first as it's a dependency for other scripts
-    loadScript('https://code.jquery.com/jquery-3.7.1.min.js', function() {
+    loadScript('https://code.jquery.com/jquery-3.7.1.min.js', function () {
       // After jQuery loads, load dependent scripts
-      loadScript('js/owl.carousel.min.js', function() {
+      loadScript('js/owl.carousel.min.js', function () {
         // Initialize carousel only when it's in viewport
         // initCarouselWhenVisible();
         $(document).ready(function () {
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        items: 1,
-        autoHeight: true,
-        autoplay: true,
-        autoplayHoverPause: true,
-      });
-      $(".prev").click(function () {
-        $(".owl-carousel").trigger("prev.owl.carousel");
+          $(".owl-carousel").owlCarousel({
+            loop: true,
+            items: 1,
+            autoHeight: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+          });
+          $(".prev").click(function () {
+            $(".owl-carousel").trigger("prev.owl.carousel");
+          });
+
+          $(".next").click(function () {
+            $(".owl-carousel").trigger("next.owl.carousel");
+          });
+        });
       });
 
-      $(".next").click(function () {
-        $(".owl-carousel").trigger("next.owl.carousel");
-      });
-    });
-      });
-      
       // Load animation library separately
-      loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', function() {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js', function () {
         // Initialize animation after library loads
         loadLaptopAnimation();
       });
     });
   });
-  
-  function loadLaptopAnimation() {
-  // Check if Lottie library is already available
-  if (typeof bodymovin !== 'undefined') {
-    initLaptopAnimation();
-    return;
-  }
-  
-  // Dynamically load the Lottie library if not already loaded
-  var script = document.createElement('script');
-  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js';
-  script.onload = function() {
-    initLaptopAnimation();
-  };
-  document.body.appendChild(script);
-}
 
-function initLaptopAnimation() {
-  var animation = bodymovin.loadAnimation({
-    container: document.getElementById("laptop"),
-    renderer: "svg",
-    loop: true,
-    autoplay: true,
-    path: "./js/Laptop.json",
-  });
-  
-  // When animation is ready, show it and hide placeholder
-  animation.addEventListener('DOMLoaded', function() {
-    // Make the animation visible first
-    var laptopAnimation = document.getElementById('laptop');
-    laptopAnimation.classList.add('loaded');
-    
-    // Then hide the placeholder
-    var placeholder = document.getElementById('laptop-placeholder');
-    if (placeholder) {
-      placeholder.style.opacity = '0';
+  function loadLaptopAnimation() {
+    // Check if Lottie library is already available
+    if (typeof bodymovin !== 'undefined') {
+      initLaptopAnimation();
+      return;
     }
-  });
-} 
-  </script>
+
+    // Dynamically load the Lottie library if not already loaded
+    var script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js';
+    script.onload = function () {
+      initLaptopAnimation();
+    };
+    document.body.appendChild(script);
+  }
+
+  function initLaptopAnimation() {
+    var animation = bodymovin.loadAnimation({
+      container: document.getElementById("laptop"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "./js/Laptop.json",
+    });
+
+    // When animation is ready, show it and hide placeholder
+    animation.addEventListener('DOMLoaded', function () {
+      // Make the animation visible first
+      var laptopAnimation = document.getElementById('laptop');
+      laptopAnimation.classList.add('loaded');
+
+      // Then hide the placeholder
+      var placeholder = document.getElementById('laptop-placeholder');
+      if (placeholder) {
+        placeholder.style.opacity = '0';
+      }
+    });
+  } 
+</script>
+
 </html>
