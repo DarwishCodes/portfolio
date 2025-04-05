@@ -1,17 +1,18 @@
 .card {
   display: block;
   font-family: "Montserrat", sans-serif;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   width: 32rem;
   margin: 0;
   height: auto;
   min-height: 35rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
   &--h-35 {
     height: 35rem;
@@ -24,22 +25,31 @@
   &__container {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
     padding: 2rem;
   }
 
   &__image-box {
     overflow: hidden;
-    // height: 27rem default;
     height: 18rem;
-    border: 1px solid rgba($color-black, 0.2);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border: none;
+    border-radius: 8px;
     opacity: 1;
-    transition: all ease 0.2s;
+    position: relative;
+    transition: all ease 0.3s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
     @include addMediaQuery(tablet) {
       opacity: 1;
@@ -47,17 +57,16 @@
 
     &--h-18 {
       height: 18rem;
-      //   margin-bottom: 12rem;
     }
   }
 
   &__image {
     display: block;
     width: 100%;
-
-    // @include addMediaQuery(laptop) {
-    //     width: 23rem;
-    // }
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+    transition: transform 0.8s ease;
 
     @include addMediaQuery(tablet) {
       width: 100%;
@@ -68,8 +77,8 @@
     margin-top: 3rem;
     margin-bottom: 7rem;
     text-align: center;
-    // transform: translateY(-18.21rem);
-    // transition: all 0.5s ease;
+    padding: 0 1.5rem;
+    transition: transform 0.5s ease;
 
     @include addMediaQuery(tablet) {
       transform: translateY(0rem);
@@ -79,20 +88,38 @@
   &__link {
     color: $color-white;
     text-decoration: none;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: $color-white;
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
   }
 
   &__title {
     display: block;
     color: $color-white;
     font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 2rem;
-    // transform: scale(1);
-    // transition: all ease 0.3s;
+    letter-spacing: -0.02em;
+    transition: all ease 0.3s;
   }
 
   &__description {
-    color: $color-white;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.52rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
     transform: scale(1);
     transition: all ease 0.3s;
@@ -105,6 +132,10 @@
   &__languages {
     margin-left: 1rem;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
 
     @include addMediaQuery(tablet) {
       margin-left: 0rem;
@@ -119,11 +150,12 @@
     font-size: 1.43rem;
     font-weight: 600;
     display: inline-block;
-    margin-right: 0.5rem;
-    border-radius: 3px;
+    border-radius: 4px;
     transform: translateY(2.25rem);
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.7rem;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     @include addMediaQuery(laptop) {
       font-size: 1.31rem;
@@ -184,12 +216,22 @@
     }
   }
 
+  /* Hover effects */
   &:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &:hover &__image-box::after {
+    opacity: 1;
+  }
+
+  &:hover &__image {
+    transform: scale(1.08);
   }
 
   &:hover &__text-block {
-    // padding: 0rem 2rem 1rem 1rem;
     transform: translateY(0rem);
   }
 
@@ -198,21 +240,13 @@
       transform: translateY(0rem);
 
       &:hover {
-        transform: translateY(-1rem);
+        transform: translateY(-0.5rem) scale(1.05);
       }
     }
   }
 
-  // &:hover &__title {
-  //   transform: scale(0.8);
-
-  //   @include addMediaQuery(tablet) {
-  //     transform: scale(1);
-  //   }
-  // }
-
   &:hover &__description {
-    transform: scale(0.94);
+    transform: scale(0.98);
 
     @include addMediaQuery(tablet) {
       transform: scale(1);
@@ -220,7 +254,7 @@
   }
 
   &:hover &__image-box {
-    border: 1px solid rgba($color-black, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease 0.3s 1;
     backface-visibility: hidden;
     animation-fill-mode: forwards;
@@ -233,12 +267,52 @@
   &:hover &__image-box &__image--disable-scroll {
     animation: none;
   }
+}
 
-  &:hover &__link {
-    color: $color-white;
+/* Add keyframe animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-    &:hover {
-      color: $color-white;
-    }
+@keyframes thumbnail {
+  0% {
+    transform: translateY(0) scale(1.08);
+  }
+  50% {
+    transform: translateY(-10%) scale(1.08);
+  }
+  100% {
+    transform: translateY(0) scale(1.08);
+  }
+}
+
+/* Add a subtle loading animation */
+.card-loading {
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }

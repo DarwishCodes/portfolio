@@ -280,7 +280,7 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 8rem;
+  bottom: 0;
   left: 50%;
   background-color: #fff;
   text-decoration: none;
@@ -333,17 +333,20 @@ body {
 .card {
   display: block;
   font-family: "Montserrat", sans-serif;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   width: 32rem;
   margin: 0;
   height: auto;
   min-height: 35rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease; }
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Hover effects */ }
   .card--h-35 {
     height: 35rem; }
   @media (max-width: 48em) {
@@ -352,19 +355,27 @@ body {
   .card__container {
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
     padding: 2rem; }
   .card__image-box {
     overflow: hidden;
     height: 18rem;
-    border: 1px solid rgba(32, 33, 36, 0.2);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border: none;
+    border-radius: 8px;
     opacity: 1;
-    transition: all ease 0.2s; }
+    position: relative;
+    transition: all ease 0.3s; }
+    .card__image-box::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease; }
     @media (max-width: 48em) {
       .card__image-box {
         opacity: 1; } }
@@ -372,28 +383,50 @@ body {
       height: 18rem; }
   .card__image {
     display: block;
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+    transition: transform 0.8s ease; }
     @media (max-width: 48em) {
       .card__image {
         width: 100%; } }
   .card__text-block {
     margin-top: 3rem;
     margin-bottom: 7rem;
-    text-align: center; }
+    text-align: center;
+    padding: 0 1.5rem;
+    transition: transform 0.5s ease; }
     @media (max-width: 48em) {
       .card__text-block {
         transform: translateY(0rem); } }
   .card__link {
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative; }
+    .card__link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: #fff;
+      transition: width 0.3s ease; }
+    .card__link:hover::after {
+      width: 100%; }
   .card__title {
     display: block;
     color: #fff;
     font-size: 2.5rem;
-    margin-bottom: 2rem; }
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    transition: all ease 0.3s; }
   .card__description {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.52rem;
+    line-height: 1.6;
     margin-bottom: 2rem;
     transform: scale(1);
     transition: all ease 0.3s; }
@@ -401,7 +434,11 @@ body {
       margin-bottom: 11rem; }
   .card__languages {
     margin-left: 1rem;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem; }
     @media (max-width: 48em) {
       .card__languages {
         margin-left: 0rem; }
@@ -411,11 +448,12 @@ body {
     font-size: 1.43rem;
     font-weight: 600;
     display: inline-block;
-    margin-right: 0.5rem;
-    border-radius: 3px;
+    border-radius: 4px;
     transform: translateY(2.25rem);
-    padding: 0.2rem 0.5rem;
-    text-align: center; }
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
     @media (max-width: 64em) {
       .card__code {
         font-size: 1.31rem; } }
@@ -456,20 +494,26 @@ body {
       background-color: #72d4f3;
       transition: all 0.3s ease 0.35s; }
   .card:hover {
-    transform: translateY(-10px); }
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2); }
+  .card:hover .card__image-box::after {
+    opacity: 1; }
+  .card:hover .card__image {
+    transform: scale(1.08); }
   .card:hover .card__text-block {
     transform: translateY(0rem); }
   .card:hover .card__languages span {
     transform: translateY(0rem); }
     .card:hover .card__languages span:hover {
-      transform: translateY(-1rem); }
+      transform: translateY(-0.5rem) scale(1.05); }
   .card:hover .card__description {
-    transform: scale(0.94); }
+    transform: scale(0.98); }
     @media (max-width: 48em) {
       .card:hover .card__description {
         transform: scale(1); } }
   .card:hover .card__image-box {
-    border: 1px solid rgba(32, 33, 36, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease 0.3s 1;
     backface-visibility: hidden;
     animation-fill-mode: forwards; }
@@ -477,10 +521,41 @@ body {
     animation: thumbnail 20s ease 0.4s infinite; }
   .card:hover .card__image-box .card__image--disable-scroll {
     animation: none; }
-  .card:hover .card__link {
-    color: #fff; }
-    .card:hover .card__link:hover {
-      color: #fff; }
+
+/* Add keyframe animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1; } }
+
+@keyframes thumbnail {
+  0% {
+    transform: translateY(0) scale(1.08); }
+  50% {
+    transform: translateY(-10%) scale(1.08); }
+  100% {
+    transform: translateY(0) scale(1.08); } }
+
+/* Add a subtle loading animation */
+.card-loading {
+  position: relative;
+  overflow: hidden; }
+  .card-loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite; }
+
+@keyframes shimmer {
+  0% {
+    left: -100%; }
+  100% {
+    left: 100%; } }
 
 .form__group {
   position: relative;
