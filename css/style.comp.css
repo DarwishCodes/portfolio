@@ -197,6 +197,12 @@ body {
 .u-margin-top-large {
   margin-top: 7rem; }
 
+.u-flex {
+  display: flex; }
+
+.u-flex-center {
+  justify-content: center; }
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   position: relative;
@@ -270,7 +276,9 @@ body {
   background-color: #2e7d32; }
 
 .icon-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 8rem;
   left: 50%;
@@ -285,6 +293,8 @@ body {
   border-radius: 50%;
   animation: clickme 3s ease 0s infinite;
   transition: all 0.3s ease; }
+  .icon-link img {
+    width: 1.5rem; }
   @media (max-width: 48em) {
     .icon-link--scroll-down {
       position: fixed;
@@ -314,7 +324,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   word-spacing: 0.1rem;
-  color: #1976d2;
+  color: #00E5FF;
   word-wrap: break-word; }
 
 .card {
@@ -526,6 +536,14 @@ body {
   cursor: text;
   transition: all 0.2s; }
 
+.form__btn {
+  display: flex;
+  align-items: center; }
+  .form__btn img {
+    width: 2rem;
+    margin-right: 1rem;
+    fill: #fff; }
+
 .form__social-icon {
   color: #202124;
   font-size: 5rem;
@@ -610,13 +628,13 @@ body {
   .testimonial-card__arrow-box {
     display: flex; }
   .testimonial-card__arrow {
-    font-size: 4rem;
+    width: 4rem;
     cursor: pointer;
-    color: #202124;
+    fill: #202124;
     margin: 0 1rem; }
     @media (max-width: 48em) {
       .testimonial-card__arrow {
-        font-size: 2.5rem; } }
+        width: 2rem; } }
   .testimonial-card__image {
     fill: #f9636b;
     width: 50%;

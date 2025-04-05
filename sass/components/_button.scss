@@ -95,7 +95,9 @@
 }
 
 .icon-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 8rem;
   left: 50%;
@@ -110,6 +112,10 @@
   border-radius: 50%;
   animation: clickme 3s ease 0s infinite;
   transition: all 0.3s ease;
+
+  img {
+    width: 1.5rem;
+  }
 
   &--scroll-down {
     @include addMediaQuery(tablet) {
@@ -153,6 +159,6 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   word-spacing: 0.1rem;
-  color: $color-primary-dark;
+  color: $color-teal-light;
   word-wrap: break-word;
 }
