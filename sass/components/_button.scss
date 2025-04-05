@@ -161,4 +161,8 @@
   word-spacing: 0.1rem;
   color: $color-teal-light;
   word-wrap: break-word;
+
+  @include addMediaQuery(phone-l) {
+    font-size: 0.8rem;
+  }
 }

@@ -326,6 +326,9 @@ body {
   word-spacing: 0.1rem;
   color: #00E5FF;
   word-wrap: break-word; }
+  @media (max-width: 26.5625em) {
+    .text-link {
+      font-size: 0.8rem; } }
 
 .card {
   display: block;
