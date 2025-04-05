@@ -328,7 +328,7 @@ body {
   word-wrap: break-word; }
   @media (max-width: 26.5625em) {
     .text-link {
-      font-size: 0.8rem; } }
+      font-size: 1.2rem; } }
 
 .card {
   display: block;
