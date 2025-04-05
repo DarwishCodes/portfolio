@@ -118,6 +118,8 @@
   }
 
   &--scroll-down {
+    bottom: 5rem;
+    
     @include addMediaQuery(tablet) {
       position: fixed;
       bottom: 5rem;

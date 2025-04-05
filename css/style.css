@@ -295,12 +295,14 @@ body {
   transition: all 0.3s ease; }
   .icon-link img {
     width: 1.5rem; }
-  @media (max-width: 48em) {
-    .icon-link--scroll-down {
-      position: fixed;
-      bottom: 5rem;
-      right: 2rem;
-      left: unset; } }
+  .icon-link--scroll-down {
+    bottom: 5rem; }
+    @media (max-width: 48em) {
+      .icon-link--scroll-down {
+        position: fixed;
+        bottom: 5rem;
+        right: 2rem;
+        left: unset; } }
   .icon-link--relative {
     position: relative; }
   .icon-link__arrow {
