@@ -516,20 +516,12 @@ body {
         transform: scale(1); } }
   .card:hover .card__image-box {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.5s ease 0.3s 1;
     backface-visibility: hidden;
     animation-fill-mode: forwards; }
   .card:hover .card__image-box .card__image--animate {
     animation: thumbnail 20s ease 0.4s infinite; }
   .card:hover .card__image-box .card__image--disable-scroll {
     animation: none; }
-
-/* Add keyframe animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0.7; }
-  100% {
-    opacity: 1; } }
 
 @keyframes thumbnail {
   0% {
