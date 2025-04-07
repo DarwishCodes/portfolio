@@ -37,3 +37,19 @@
 .u-flex-center {
     justify-content: center;
 }
+
+.u-show-tablet {
+    display: none;
+
+    @include addMediaQuery(tablet) {
+        display: block !important;
+    }
+}
+
+.u-hide-tablet {
+    display: block;
+
+    @include addMediaQuery(tablet) {
+        display: none !important;
+    }
+}
