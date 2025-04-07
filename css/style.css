@@ -159,7 +159,6 @@ body {
 .heading-tertiary {
   font-size: 2.1rem;
   font-weight: 700;
-  text-transform: uppercase;
   color: #fff;
   line-height: 0; }
 
@@ -1109,7 +1108,7 @@ body {
       padding: 0rem 0 5rem 0; } }
 
 .section-about {
-  padding: 10rem 2rem;
+  padding: 5rem 2rem;
   background: linear-gradient(135deg, #112564 0%, #020230 100%); }
   @media (max-width: 48em) {
     .section-about {
