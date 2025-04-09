@@ -379,16 +379,6 @@ body {
     opacity: 1;
     position: relative;
     transition: all ease 0.3s; }
-    .card__image-box::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 30%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease; }
     @media (max-width: 48em) {
       .card__image-box {
         opacity: 1; } }
@@ -502,10 +492,30 @@ body {
       color: #fff;
       background-color: #b71c1c;
       transition: all 0.3s ease 0.35s; }
+    .card__code--laravel {
+      color: #fff;
+      background-color: #b71c1c;
+      transition: all 0.3s ease 0.35s; }
     .card__code--react {
       color: #202124;
       background-color: #72d4f3;
       transition: all 0.3s ease 0.35s; }
+    .card__code--magento {
+      color: #fff;
+      background-color: #f0672f;
+      transition: all 0.3s ease 0.20s; }
+    .card__code--typescript {
+      color: #fff;
+      background-color: #3178c6;
+      transition: all 0.3s ease 0.35s; }
+    .card__code--hyva {
+      color: #14ffaf;
+      background-color: #0a23b9;
+      transition: all 0.3s ease 0.40s; }
+    .card__code--livewire {
+      color: #fff;
+      background-color: #4e56a6;
+      transition: all 0.3s ease 0.42s; }
   .card:hover {
     transform: translateY(-12px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);

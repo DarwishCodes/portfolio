@@ -39,17 +39,17 @@
     position: relative;
     transition: all ease 0.3s;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 30%;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 30%;
+    //   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    //   opacity: 0;
+    //   transition: opacity 0.3s ease;
+    // }
 
     @include addMediaQuery(tablet) {
       opacity: 1;
@@ -209,10 +209,41 @@
       transition: all 0.3s ease 0.35s;
     }
 
+    &--laravel {
+      color: $color-white;
+      background-color: $color-red;
+      transition: all 0.3s ease 0.35s;
+    }
+
     &--react {
       color: $color-black;
       background-color: $color-cyan;
       transition: all 0.3s ease 0.35s;
+    }
+    
+    &--magento {
+      color: $color-white;
+      background-color: $color-orange-2;
+      transition: all 0.3s ease 0.20s;
+    }
+
+    &--typescript {
+      color: $color-white;
+      background-color: $color-blue-2;
+      transition: all 0.3s ease 0.35s;
+    }
+
+    &--hyva {
+      color: $color-green-2;
+      background-color: $color-blue-3;
+      transition: all 0.3s ease 0.40s;
+    }
+
+    &--livewire {
+      color: $color-white;
+      background-color: $color-purple-2;
+      transition: all 0.3s ease 0.42s;
+
     }
   }
 
