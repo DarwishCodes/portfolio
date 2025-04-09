@@ -384,6 +384,21 @@ body {
         opacity: 1; } }
     .card__image-box--h-18 {
       height: 18rem; }
+  .card__flag {
+    display: inline-block;
+    margin-left: 1rem;
+    vertical-align: middle;
+    position: relative;
+    top: 0.5rem;
+    cursor: help;
+    opacity: 0.9;
+    transition: all 0.3s ease; }
+    .card__flag img {
+      width: 2.2rem;
+      height: 2.2rem; }
+    .card__flag:hover {
+      transform: scale(1.2);
+      opacity: 1; }
   .card__image {
     display: block;
     width: 100%;
