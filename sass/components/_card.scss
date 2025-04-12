@@ -110,6 +110,9 @@
     text-decoration: none;
     position: relative;
     
+    &--small {
+      font-size: 1.8rem;
+    }
     &::after {
       content: '';
       position: absolute;

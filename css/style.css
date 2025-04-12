@@ -422,6 +422,8 @@ body {
     color: #fff;
     text-decoration: none;
     position: relative; }
+    .card__link--small {
+      font-size: 1.8rem; }
     .card__link::after {
       content: '';
       position: absolute;
